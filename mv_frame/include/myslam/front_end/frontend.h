@@ -7,6 +7,7 @@
 #include "myslam/common_include.h"
 #include "myslam/map/frame.h"
 #include "myslam/map/map.h"
+#include "myslam/visual_odometry.h"
 
 namespace myslam {
 
@@ -100,6 +101,12 @@ class Frontend {
     bool BuildInitMap();
 
     /**
+     * Build the initial rgbd map with single image
+     * @return true if succeed
+     */
+    bool BuildInitRgbdMap()
+
+    /**
      * Triangulate the 2D points in current frame
      * @return num of triangulated points
      */
@@ -109,6 +116,11 @@ class Frontend {
      * Set the features in keyframe as new observation of the map points
      */
     void SetObservationsForKeyFrame();
+
+    /**
+     * RGBD sensor add mappoint without TriangulateNewPoints
+     */
+    void RgbdAddMappoint();
 
     // data
     FrontendStatus status_ = FrontendStatus::INITING;

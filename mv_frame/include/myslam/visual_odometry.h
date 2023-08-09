@@ -17,11 +17,16 @@ namespace myslam
     class VisualOdometry
     {
     public:
+            enum eSensor{
+            MONOCULAR=0,
+            STEREO=1,
+            RGBD=2
+        };
         EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
         typedef std::shared_ptr<VisualOdometry> Ptr;
 
         /// constructor with config file
-        VisualOdometry(std::string &config_path);
+        VisualOdometry(std::string &config_path, const eSensor sensor);
 
         /**
          * do initialization things before run
@@ -43,6 +48,8 @@ namespace myslam
         FrontendStatus GetFrontendStatus() const { return frontend_->GetStatus(); }
 
     private:
+        eSensor sensor_;
+
         bool inited_ = false;
         std::string config_file_path_;
 

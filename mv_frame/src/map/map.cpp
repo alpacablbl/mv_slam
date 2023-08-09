@@ -106,6 +106,8 @@ namespace myslam
                 mp->RemoveObservation(feat);
             }
         }
+
+        //TODO 如果是RGBD相机不用进行处理
         for (auto feat : frame_to_remove->features_right_)
         {
             if (feat == nullptr)

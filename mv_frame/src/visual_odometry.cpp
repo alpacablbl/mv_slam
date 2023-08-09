@@ -8,8 +8,19 @@
 namespace myslam
 {
 
-    VisualOdometry::VisualOdometry(std::string &config_path)
-        : config_file_path_(config_path) {}
+    VisualOdometry::VisualOdometry(std::string &config_path, const eSensor sensor)
+        : config_file_path_(config_path), sensor_(sensor) 
+        {
+            // 输出当前传感器类型
+            cout << "Input sensor was set to: ";
+
+            if(sensor_==MONOCULAR)
+                cout << "Monocular" << endl;
+            else if(sensor_==STEREO)
+                cout << "Stereo" << endl;
+            else if(sensor_==RGBD)
+                cout << "RGB-D" << endl;
+        }
 
     bool VisualOdometry::Init()
     {

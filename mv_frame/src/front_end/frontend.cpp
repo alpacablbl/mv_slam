@@ -97,10 +97,19 @@ namespace myslam
         SetObservationsForKeyFrame();
         DetectFeatures(); // detect new features
 
-        // track in right image
-        FindFeaturesInRight();
-        // triangulate map points
-        TriangulateNewPoints();
+        if (VisualOdometry::sensor_ == VisualOdometry::STEREO) 
+        {
+            // track in right image
+            FindFeaturesInRight();
+            // triangulate map points
+            TriangulateNewPoints();
+        }
+        else if (VisualOdometry::sensor_ == VisualOdometry::RGBD) 
+        {
+            //TODO 
+            RgbdAddMappoint();
+        }
+
         // update backend because we have a new keyframe
         backend_->UpdateMap();
 
@@ -152,6 +161,41 @@ namespace myslam
 
                     current_frame_->features_left_[i]->map_point_ = new_map_point;
                     current_frame_->features_right_[i]->map_point_ = new_map_point;
+                    map_->InsertMapPoint(new_map_point);
+                    cnt_triangulated_pts++;
+                }
+            }
+        }
+        LOG(INFO) << "new landmarks: " << cnt_triangulated_pts;
+        return cnt_triangulated_pts;
+    }
+
+    //TODO
+    void RgbdAddMappoint()
+    {
+        SE3 current_pose_Twc = current_frame_->Pose().inverse();
+        int cnt_triangulated_pts = 0;
+        for (size_t i = 0; i < current_frame_->features_left_.size(); ++i)
+        {
+            if (current_frame_->features_left_[i]->map_point_.expired())
+            {
+                
+                Vec3 pworld = {Vec2(current_frame_->features_left_[i]->position_.pt.x,
+                             current_frame_->features_left_[i]->position_.pt.y),
+                             current_frame_->depth};
+
+                if (current_frame_->depth > 0)
+                {
+                    auto new_map_point = MapPoint::CreateNewMappoint();
+                    pworld = current_pose_Twc * pworld;
+                    new_map_point->SetPos(pworld);
+                    new_map_point->AddObservation(
+                        current_frame_->features_left_[i]);
+                    // new_map_point->AddObservation(
+                    //     current_frame_->features_right_[i]);
+
+                    current_frame_->features_left_[i]->map_point_ = new_map_point;
+                    //current_frame_->features_right_[i]->map_point_ = new_map_point;
                     map_->InsertMapPoint(new_map_point);
                     cnt_triangulated_pts++;
                 }
@@ -411,6 +455,7 @@ namespace myslam
         return num_good_pts;
     }
 
+    //TODO RGBD相机初始化不用三角化，直接判断一下深度是否合法就可以加进去了
     bool Frontend::BuildInitMap()
     {
         std::vector<SE3> poses{camera_left_->pose(), camera_right_->pose()};
@@ -443,6 +488,44 @@ namespace myslam
                 map_->InsertMapPoint(new_map_point); // 初始化完成的地图点加入地图
             }
         }
+        current_frame_->SetKeyFrame();
+        map_->InsertKeyFrame(current_frame_);
+        backend_->UpdateMap(); // 关键帧的插入会启动优化
+
+        LOG(INFO) << "Initial map created with " << cnt_init_landmarks
+                  << " map points";
+
+        return true;
+    }
+
+    bool Frontend::BuildInitRgbdMap()
+    {
+        
+        int cnt_init_lanmarks = 0;
+        for (size_t i = 0; i < current_frame_->features_left_.size(); ++i)
+        {
+            
+            Vec3 pworld = {Vec2(current_frame_->features_left_[i]->position_.pt.x,
+                            current_frame_->features_left_[i]->position_.pt.y),
+                            current_frame_->depth};
+
+            if (current_frame_->depth > 0)
+            {
+                auto new_map_point = MapPoint::CreateNewMappoint();
+                
+                new_map_point->SetPos(pworld);
+                new_map_point->AddObservation(
+                    current_frame_->features_left_[i]);
+                // new_map_point->AddObservation(
+                //     current_frame_->features_right_[i]);
+
+                current_frame_->features_left_[i]->map_point_ = new_map_point;
+                //current_frame_->features_right_[i]->map_point_ = new_map_point;
+                map_->InsertMapPoint(new_map_point);
+                cnt_init_landmarks++;
+            }
+        }
+        
         current_frame_->SetKeyFrame();
         map_->InsertKeyFrame(current_frame_);
         backend_->UpdateMap(); // 关键帧的插入会启动优化

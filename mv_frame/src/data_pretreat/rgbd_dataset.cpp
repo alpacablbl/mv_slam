@@ -22,31 +22,27 @@ namespace myslam
             return false;
         }
 
-        for (int i = 0; i < 4; ++i)
-        {
-            char camera_name[3]; //"P0"两个字符，开3个char，4个相机：左灰， 右灰，左彩，右彩
-            for (int k = 0; k < 3; ++k)
-            {
-                fin >> camera_name[k];
-            }
-            double projection_data[12]; // 内参矩阵
-            for (int k = 0; k < 12; ++k)
-            {
-                fin >> projection_data[k];
-            }
-            Mat33 K;
-            K << projection_data[0], projection_data[1], projection_data[2],
-                projection_data[4], projection_data[5], projection_data[6],
-                projection_data[8], projection_data[9], projection_data[10];
-            Vec3 t;
-            t << projection_data[3], projection_data[7], projection_data[11];
-            t = K.inverse() * t;
-            K = K * 0.5;
-            Camera::Ptr new_camera(new Camera(K(0, 0), K(1, 1), K(0, 2), K(1, 2),
-                                              t.norm(), SE3(SO3(), t))); // 初始化时仅有几个相机间的平移关系
-            cameras_.push_back(new_camera);
-            LOG(INFO) << "Camera " << i << " extrinsics: " << t.transpose();
-        }
+        
+        //目前直接硬编码相机内参
+        Mat33 K;
+        K << 517.3, 0, 325.1,
+            0, 516.5, 249.7,
+            0, 0, 1;
+        Vec3 t;
+
+        //TODO，需要生成虚拟右目 得到baseline和t
+        t << projection_data[3], projection_data[7], projection_data[11];
+        t = K.inverse() * t;
+        K = K * 0.5;
+        Camera::Ptr new_camera(new Camera(K(0, 0), K(1, 1), K(0, 2), K(1, 2),
+                                            t.norm(), SE3(SO3(), t))); // 初始化时仅有几个相机间的平移关系
+
+        //matK与distCoeffs用来去畸变                                    
+        new_camera.matK = (cv::Mat_<double>(3, 3) << 517.3, 0, 325.1, 0, 516.5, 249.7, 0, 0, 1);
+        new_camera.distCoeffs = cv::Mat::zeros(5,1,CV_64F);
+        cameras_.push_back(new_camera);
+        LOG(INFO) << "Camera " << i << " extrinsics: " << t.transpose();
+
         fin.close();
         current_image_index_ = 0;
         return true;
