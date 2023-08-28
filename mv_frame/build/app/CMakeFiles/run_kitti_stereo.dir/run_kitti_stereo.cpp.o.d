@@ -1,9 +1,9 @@
 app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/app/run_kitti_stereo.cpp \
+ /home/alpaca/mv_slam/mv_frame/app/run_kitti_stereo.cpp \
  /usr/include/stdc-predef.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/visual_odometry.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/back_end/backend.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/common_include.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/visual_odometry.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/back_end/backend.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/common_include.h \
  /usr/include/c++/9/atomic /usr/include/c++/9/bits/atomic_base.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -441,17 +441,17 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: \
  /usr/local/include/gflags/gflags_declare.h \
  /usr/local/include/glog/log_severity.h \
  /usr/local/include/glog/vlog_is_on.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/map/frame.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/camera.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/map/map.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/map/mappoint.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/data_pretreat/dataset.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/front_end/frontend.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/map/frame.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/camera.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/map/map.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/map/mappoint.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/data_pretreat/dataset.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/front_end/frontend.h \
  /usr/local/include/opencv2/features2d.hpp \
  /usr/local/include/opencv2/flann/miniflann.hpp \
  /usr/local/include/opencv2/flann/defines.h \
  /usr/local/include/opencv2/flann/config.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/viewer/viewer.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/viewer/viewer.h \
  /usr/local/include/pangolin/pangolin.h \
  /usr/local/include/pangolin/platform.h \
  /usr/local/include/pangolin/config.h /usr/local/include/pangolin/gl/gl.h \

@@ -1,5 +1,5 @@
 src/CMakeFiles/myslam.dir/front_end/frontend.cpp.o: \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/src/front_end/frontend.cpp \
+ /home/alpaca/mv_slam/mv_frame/src/front_end/frontend.cpp \
  /usr/include/stdc-predef.h /usr/local/include/opencv2/opencv.hpp \
  /usr/local/include/opencv2/opencv_modules.hpp \
  /usr/local/include/opencv2/core.hpp \
@@ -342,8 +342,9 @@ src/CMakeFiles/myslam.dir/front_end/frontend.cpp.o: \
  /usr/local/include/opencv2/viz/widgets.hpp \
  /usr/local/include/opencv2/viz/viz3d.hpp \
  /usr/local/include/opencv2/viz/vizcore.hpp \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/tools/algorithm.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/common_include.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/visual_odometry.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/back_end/backend.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/common_include.h \
  /usr/include/c++/9/atomic /usr/include/c++/9/bits/atomic_base.h \
  /usr/include/c++/9/bits/atomic_lockfree_defines.h \
  /usr/include/c++/9/condition_variable \
@@ -558,15 +559,69 @@ src/CMakeFiles/myslam.dir/front_end/frontend.cpp.o: \
  /usr/local/include/gflags/gflags_declare.h \
  /usr/local/include/glog/log_severity.h \
  /usr/local/include/glog/vlog_is_on.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/back_end/backend.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/map/frame.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/camera.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/map/map.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/map/mappoint.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/config/config.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/feature/feature.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/front_end/frontend.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/g2o_types.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/map/frame.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/camera.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/map/map.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/map/mappoint.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/data_pretreat/dataset.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/front_end/frontend.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/viewer/viewer.h \
+ /usr/local/include/pangolin/pangolin.h \
+ /usr/local/include/pangolin/platform.h \
+ /usr/local/include/pangolin/config.h /usr/local/include/pangolin/gl/gl.h \
+ /usr/local/include/pangolin/gl/glinclude.h \
+ /usr/local/include/pangolin/gl/glplatform.h /usr/include/GL/glew.h \
+ /usr/include/GL/glu.h /usr/include/GL/gl.h \
+ /usr/local/include/pangolin/gl/glpangoglu.h \
+ /usr/local/include/pangolin/display/viewport.h \
+ /usr/local/include/pangolin/image/image_io.h \
+ /usr/local/include/pangolin/image/image.h \
+ /usr/local/include/pangolin/image/image_common.h \
+ /usr/local/include/pangolin/utils/type_convert.h \
+ /usr/local/include/pangolin/compat/type_traits.h \
+ /usr/local/include/pangolin/utils/uri.h \
+ /usr/local/include/pangolin/utils/params.h \
+ /usr/local/include/pangolin/utils/file_extension.h \
+ /usr/local/include/pangolin/gl/gl.hpp \
+ /usr/local/include/pangolin/gl/glpixformat.h \
+ /usr/local/include/pangolin/gl/glformattraits.h \
+ /usr/local/include/pangolin/display/display.h \
+ /usr/local/include/pangolin/handler/handler_enums.h \
+ /usr/local/include/pangolin/display/window.h \
+ /usr/local/include/pangolin/gl/gldraw.h \
+ /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
+ /usr/local/include/pangolin/gl/glvbo.h \
+ /usr/local/include/pangolin/gl/glstate.h /usr/include/c++/9/stack \
+ /usr/include/c++/9/bits/stl_stack.h \
+ /usr/local/include/pangolin/gl/colour.h \
+ /usr/local/include/pangolin/display/view.h \
+ /usr/local/include/pangolin/display/attach.h \
+ /usr/local/include/pangolin/plot/plotter.h \
+ /usr/local/include/pangolin/gl/glsl.h \
+ /usr/local/include/pangolin/utils/file_utils.h \
+ /usr/local/include/pangolin/display/opengl_render_state.h \
+ /usr/local/include/pangolin/utils/simple_math.h \
+ /usr/local/include/pangolin/gl/glfont.h \
+ /usr/local/include/pangolin/gl/gltext.h \
+ /usr/local/include/pangolin/gl/glchar.h /usr/include/c++/9/cstdarg \
+ /usr/local/include/pangolin/handler/handler.h \
+ /usr/local/include/pangolin/plot/datalog.h \
+ /usr/local/include/pangolin/plot/range.h \
+ /usr/local/include/pangolin/var/varextra.h \
+ /usr/local/include/pangolin/var/var.h \
+ /usr/local/include/pangolin/var/varvalue.h \
+ /usr/local/include/pangolin/var/varvaluet.h \
+ /usr/local/include/pangolin/var/varvaluegeneric.h \
+ /usr/local/include/pangolin/var/varwrapper.h \
+ /usr/local/include/pangolin/var/varstate.h \
+ /usr/local/include/pangolin/display/widgets/widgets.h \
+ /usr/local/include/pangolin/video/video.h \
+ /usr/local/include/pangolin/utils/picojson.h \
+ /usr/local/include/pangolin/video/video_output.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/tools/algorithm.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/config/config.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/feature/feature.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/g2o_types.h \
  /usr/local/include/g2o/core/base_binary_edge.h \
  /usr/local/include/g2o/core/base_edge.h \
  /usr/local/include/g2o/core/optimizable_graph.h \
@@ -590,8 +645,7 @@ src/CMakeFiles/myslam.dir/front_end/frontend.cpp.o: \
  /usr/local/include/g2o/core/base_unary_edge.hpp \
  /usr/local/include/g2o/core/base_vertex.h \
  /usr/local/include/g2o/core/creators.h \
- /usr/include/eigen3/Eigen/Cholesky /usr/include/c++/9/stack \
- /usr/include/c++/9/bits/stl_stack.h \
+ /usr/include/eigen3/Eigen/Cholesky \
  /usr/local/include/g2o/core/base_vertex.hpp \
  /usr/local/include/g2o/core/block_solver.h \
  /usr/local/include/g2o/core/solver.h \
@@ -627,56 +681,4 @@ src/CMakeFiles/myslam.dir/front_end/frontend.cpp.o: \
  /usr/local/include/g2o/core/batch_stats.h \
  /usr/local/include/g2o/core/marginal_covariance_cholesky.h \
  /usr/local/include/g2o/solvers/csparse/g2o_csparse_api.h \
- /usr/local/include/g2o/solvers/dense/linear_solver_dense.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/viewer/viewer.h \
- /usr/local/include/pangolin/pangolin.h \
- /usr/local/include/pangolin/platform.h \
- /usr/local/include/pangolin/config.h /usr/local/include/pangolin/gl/gl.h \
- /usr/local/include/pangolin/gl/glinclude.h \
- /usr/local/include/pangolin/gl/glplatform.h /usr/include/GL/glew.h \
- /usr/include/GL/glu.h /usr/include/GL/gl.h \
- /usr/local/include/pangolin/gl/glpangoglu.h \
- /usr/local/include/pangolin/display/viewport.h \
- /usr/local/include/pangolin/image/image_io.h \
- /usr/local/include/pangolin/image/image.h \
- /usr/local/include/pangolin/image/image_common.h \
- /usr/local/include/pangolin/utils/type_convert.h \
- /usr/local/include/pangolin/compat/type_traits.h \
- /usr/local/include/pangolin/utils/uri.h \
- /usr/local/include/pangolin/utils/params.h \
- /usr/local/include/pangolin/utils/file_extension.h \
- /usr/local/include/pangolin/gl/gl.hpp \
- /usr/local/include/pangolin/gl/glpixformat.h \
- /usr/local/include/pangolin/gl/glformattraits.h \
- /usr/local/include/pangolin/display/display.h \
- /usr/local/include/pangolin/handler/handler_enums.h \
- /usr/local/include/pangolin/display/window.h \
- /usr/local/include/pangolin/gl/gldraw.h \
- /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
- /usr/local/include/pangolin/gl/glvbo.h \
- /usr/local/include/pangolin/gl/glstate.h \
- /usr/local/include/pangolin/gl/colour.h \
- /usr/local/include/pangolin/display/view.h \
- /usr/local/include/pangolin/display/attach.h \
- /usr/local/include/pangolin/plot/plotter.h \
- /usr/local/include/pangolin/gl/glsl.h \
- /usr/local/include/pangolin/utils/file_utils.h \
- /usr/local/include/pangolin/display/opengl_render_state.h \
- /usr/local/include/pangolin/utils/simple_math.h \
- /usr/local/include/pangolin/gl/glfont.h \
- /usr/local/include/pangolin/gl/gltext.h \
- /usr/local/include/pangolin/gl/glchar.h /usr/include/c++/9/cstdarg \
- /usr/local/include/pangolin/handler/handler.h \
- /usr/local/include/pangolin/plot/datalog.h \
- /usr/local/include/pangolin/plot/range.h \
- /usr/local/include/pangolin/var/varextra.h \
- /usr/local/include/pangolin/var/var.h \
- /usr/local/include/pangolin/var/varvalue.h \
- /usr/local/include/pangolin/var/varvaluet.h \
- /usr/local/include/pangolin/var/varvaluegeneric.h \
- /usr/local/include/pangolin/var/varwrapper.h \
- /usr/local/include/pangolin/var/varstate.h \
- /usr/local/include/pangolin/display/widgets/widgets.h \
- /usr/local/include/pangolin/video/video.h \
- /usr/local/include/pangolin/utils/picojson.h \
- /usr/local/include/pangolin/video/video_output.h
+ /usr/local/include/g2o/solvers/dense/linear_solver_dense.h

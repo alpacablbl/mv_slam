@@ -1,4 +1,4 @@
-# Install script for directory: /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame
+# Install script for directory: /home/alpaca/mv_slam/mv_frame
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,8 +44,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build/src/cmake_install.cmake")
-  include("/home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build/app/cmake_install.cmake")
+  include("/home/alpaca/mv_slam/mv_frame/build/src/cmake_install.cmake")
+  include("/home/alpaca/mv_slam/mv_frame/build/app/cmake_install.cmake")
 
 endif()
 
@@ -57,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/alpaca/mv_slam/mv_frame/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,7 +1,7 @@
 src/CMakeFiles/myslam.dir/feature/feature.cpp.o: \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/src/feature/feature.cpp \
+ /home/alpaca/mv_slam/mv_frame/src/feature/feature.cpp \
  /usr/include/stdc-predef.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/feature/feature.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/feature/feature.h \
  /usr/include/c++/9/memory /usr/include/c++/9/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -222,7 +222,7 @@ src/CMakeFiles/myslam.dir/feature/feature.cpp.o: \
  /usr/local/include/opencv2/flann/miniflann.hpp \
  /usr/local/include/opencv2/flann/defines.h \
  /usr/local/include/opencv2/flann/config.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/common_include.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/common_include.h \
  /usr/include/c++/9/atomic /usr/include/c++/9/condition_variable \
  /usr/include/c++/9/chrono /usr/include/c++/9/ratio \
  /usr/include/c++/9/ctime /usr/include/c++/9/bits/parse_numbers.h \

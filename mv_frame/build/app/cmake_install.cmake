@@ -1,4 +1,4 @@
-# Install script for directory: /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/app
+# Install script for directory: /home/alpaca/mv_slam/mv_frame/app
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

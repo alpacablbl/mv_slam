@@ -1,6 +1,6 @@
 %YAML:1.0
 # data
-dataset_dir: /media/alpaca/ubuntu18/data/kitti00/dataset/sequences/00
+dataset_dir: /media/alpaca/ubuntu18/data/rgbd_dataset_freiburg1_xyz
 
 # camera intrinsics
 camera.fx: 517.3

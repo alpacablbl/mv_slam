@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/eigen3 -I/usr/include/suitesparse -I/home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include -isystem /usr/local/include/opencv
+CXX_INCLUDES = -I/usr/include/eigen3 -I/usr/include/suitesparse -I/home/alpaca/mv_slam/mv_frame/include -isystem /usr/local/include/opencv
 
 CXX_FLAGS = -std=c++11 -Wall -std=c++11 -O3 -fopenmp -pthread
 

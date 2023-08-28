@@ -1,4 +1,4 @@
-#pragma once
+
 #ifndef MYSLAM_VISUAL_ODOMETRY_H
 #define MYSLAM_VISUAL_ODOMETRY_H
 
@@ -17,13 +17,15 @@ namespace myslam
     class VisualOdometry
     {
     public:
-            enum eSensor{
-            MONOCULAR=0,
-            STEREO=1,
-            RGBD=2
+        enum eSensor
+        {
+            MONOCULAR = 0,
+            STEREO = 1,
+            RGBD = 2
         };
         EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
         typedef std::shared_ptr<VisualOdometry> Ptr;
+        eSensor sensor_;
 
         /// constructor with config file
         VisualOdometry(std::string &config_path, const eSensor sensor);
@@ -45,11 +47,9 @@ namespace myslam
         bool Step();
 
         /// 获取前端状态
-        FrontendStatus GetFrontendStatus() const { return frontend_->GetStatus(); }
+        // FrontendStatus GetFrontendStatus() const { return frontend_->GetStatus(); }
 
     private:
-        eSensor sensor_;
-
         bool inited_ = false;
         std::string config_file_path_;
 

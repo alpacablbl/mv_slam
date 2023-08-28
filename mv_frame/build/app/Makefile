@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame
+CMAKE_SOURCE_DIR = /home/alpaca/mv_slam/mv_frame
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build
+CMAKE_BINARY_DIR = /home/alpaca/mv_slam/mv_frame/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build/CMakeFiles /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build/app//CMakeFiles/progress.marks
-	cd /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build/CMakeFiles 0
+	cd /home/alpaca/mv_slam/mv_frame/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/alpaca/mv_slam/mv_frame/build/CMakeFiles /home/alpaca/mv_slam/mv_frame/build/app//CMakeFiles/progress.marks
+	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alpaca/mv_slam/mv_frame/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/clean
+	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
+	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
+	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/alpaca/mv_slam/mv_frame/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 app/CMakeFiles/run_kitti_stereo.dir/rule:
-	cd /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/run_kitti_stereo.dir/rule
+	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/run_kitti_stereo.dir/rule
 .PHONY : app/CMakeFiles/run_kitti_stereo.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ run_kitti_stereo: app/CMakeFiles/run_kitti_stereo.dir/rule
 
 # fast build rule for target.
 run_kitti_stereo/fast:
-	cd /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_kitti_stereo.dir/build.make app/CMakeFiles/run_kitti_stereo.dir/build
+	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_kitti_stereo.dir/build.make app/CMakeFiles/run_kitti_stereo.dir/build
 .PHONY : run_kitti_stereo/fast
 
 run_kitti_stereo.o: run_kitti_stereo.cpp.o
@@ -135,7 +135,7 @@ run_kitti_stereo.o: run_kitti_stereo.cpp.o
 
 # target to build an object file
 run_kitti_stereo.cpp.o:
-	cd /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_kitti_stereo.dir/build.make app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o
+	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_kitti_stereo.dir/build.make app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o
 .PHONY : run_kitti_stereo.cpp.o
 
 run_kitti_stereo.i: run_kitti_stereo.cpp.i
@@ -143,7 +143,7 @@ run_kitti_stereo.i: run_kitti_stereo.cpp.i
 
 # target to preprocess a source file
 run_kitti_stereo.cpp.i:
-	cd /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_kitti_stereo.dir/build.make app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.i
+	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_kitti_stereo.dir/build.make app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.i
 .PHONY : run_kitti_stereo.cpp.i
 
 run_kitti_stereo.s: run_kitti_stereo.cpp.s
@@ -151,7 +151,7 @@ run_kitti_stereo.s: run_kitti_stereo.cpp.s
 
 # target to generate assembly for a file
 run_kitti_stereo.cpp.s:
-	cd /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_kitti_stereo.dir/build.make app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.s
+	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_kitti_stereo.dir/build.make app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.s
 .PHONY : run_kitti_stereo.cpp.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/alpaca/mv_slam/mv_frame/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

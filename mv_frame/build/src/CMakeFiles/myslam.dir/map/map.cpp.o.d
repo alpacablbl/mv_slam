@@ -1,8 +1,7 @@
 src/CMakeFiles/myslam.dir/map/map.cpp.o: \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/src/map/map.cpp \
- /usr/include/stdc-predef.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/map/map.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/common_include.h \
+ /home/alpaca/mv_slam/mv_frame/src/map/map.cpp /usr/include/stdc-predef.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/map/map.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/common_include.h \
  /usr/include/c++/9/atomic /usr/include/c++/9/bits/atomic_base.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -440,10 +439,10 @@ src/CMakeFiles/myslam.dir/map/map.cpp.o: \
  /usr/local/include/gflags/gflags_declare.h \
  /usr/local/include/glog/log_severity.h \
  /usr/local/include/glog/vlog_is_on.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/map/frame.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/camera.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/map/mappoint.h \
- /home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/include/myslam/feature/feature.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/map/frame.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/camera.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/map/mappoint.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/feature/feature.h \
  /usr/local/include/opencv2/features2d.hpp \
  /usr/local/include/opencv2/flann/miniflann.hpp \
  /usr/local/include/opencv2/flann/defines.h \

@@ -9,18 +9,18 @@ namespace myslam
 {
 
     VisualOdometry::VisualOdometry(std::string &config_path, const eSensor sensor)
-        : config_file_path_(config_path), sensor_(sensor) 
-        {
-            // 输出当前传感器类型
-            cout << "Input sensor was set to: ";
+        : config_file_path_(config_path), sensor_(sensor)
+    {
+        // 输出当前传感器类型
+        std::cout << "Input sensor was set to: ";
 
-            if(sensor_==MONOCULAR)
-                cout << "Monocular" << endl;
-            else if(sensor_==STEREO)
-                cout << "Stereo" << endl;
-            else if(sensor_==RGBD)
-                cout << "RGB-D" << endl;
-        }
+        if (sensor_ == MONOCULAR)
+            std::cout << "Monocular" << std::endl;
+        else if (sensor_ == STEREO)
+            std::cout << "Stereo" << std::endl;
+        else if (sensor_ == RGBD)
+            std::cout << "RGB-D" << std::endl;
+    }
 
     bool VisualOdometry::Init()
     {
@@ -35,7 +35,7 @@ namespace myslam
         CHECK_EQ(dataset_->Init(), true);
 
         // create components and links
-        frontend_ = Frontend::Ptr(new Frontend);
+        frontend_ = Frontend::Ptr(new Frontend(sensor_));
         backend_ = Backend::Ptr(new Backend);
         map_ = Map::Ptr(new Map);
         viewer_ = Viewer::Ptr(new Viewer);

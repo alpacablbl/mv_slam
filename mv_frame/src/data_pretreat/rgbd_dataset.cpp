@@ -1,4 +1,4 @@
-#include "myslam/data_pretreat/dataset.h"
+#include "myslam/data_pretreat/rgbd_dataset.h"
 #include "myslam/map/frame.h"
 
 #include <boost/format.hpp>
@@ -22,26 +22,25 @@ namespace myslam
             return false;
         }
 
-        
-        //目前直接硬编码相机内参
+        // 目前直接硬编码相机内参
         Mat33 K;
         K << 517.3, 0, 325.1,
             0, 516.5, 249.7,
             0, 0, 1;
         Vec3 t;
 
-        //TODO，需要生成虚拟右目 得到baseline和t
-        t << projection_data[3], projection_data[7], projection_data[11];
+        // TODO，需要生成虚拟右目 得到baseline和t
+        t << 0, 0, 0;
         t = K.inverse() * t;
         K = K * 0.5;
         Camera::Ptr new_camera(new Camera(K(0, 0), K(1, 1), K(0, 2), K(1, 2),
-                                            t.norm(), SE3(SO3(), t))); // 初始化时仅有几个相机间的平移关系
+                                          t.norm(), SE3(SO3(), t))); // 初始化时仅有几个相机间的平移关系
 
-        //matK与distCoeffs用来去畸变                                    
-        new_camera.matK = (cv::Mat_<double>(3, 3) << 517.3, 0, 325.1, 0, 516.5, 249.7, 0, 0, 1);
-        new_camera.distCoeffs = cv::Mat::zeros(5,1,CV_64F);
+        // matK与distCoeffs用来去畸变
+        new_camera->matK = (cv::Mat_<double>(3, 3) << 517.3, 0, 325.1, 0, 516.5, 249.7, 0, 0, 1);
+
+        new_camera->distCoeffs = cv::Mat::zeros(5, 1, CV_64F);
         cameras_.push_back(new_camera);
-        LOG(INFO) << "Camera " << i << " extrinsics: " << t.transpose();
 
         fin.close();
         current_image_index_ = 0;

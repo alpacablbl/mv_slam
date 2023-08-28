@@ -1,8 +1,8 @@
-/home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build/CMakeFiles/edit_cache.dir
-/home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build/CMakeFiles/rebuild_cache.dir
-/home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build/src/CMakeFiles/myslam.dir
-/home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build/src/CMakeFiles/edit_cache.dir
-/home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build/src/CMakeFiles/rebuild_cache.dir
-/home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build/app/CMakeFiles/run_kitti_stereo.dir
-/home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build/app/CMakeFiles/edit_cache.dir
-/home/alpaca/v_slam_lesson/my_slam_ws/mv_frame/build/app/CMakeFiles/rebuild_cache.dir
+/home/alpaca/mv_slam/mv_frame/build/CMakeFiles/edit_cache.dir
+/home/alpaca/mv_slam/mv_frame/build/CMakeFiles/rebuild_cache.dir
+/home/alpaca/mv_slam/mv_frame/build/src/CMakeFiles/myslam.dir
+/home/alpaca/mv_slam/mv_frame/build/src/CMakeFiles/edit_cache.dir
+/home/alpaca/mv_slam/mv_frame/build/src/CMakeFiles/rebuild_cache.dir
+/home/alpaca/mv_slam/mv_frame/build/app/CMakeFiles/run_kitti_stereo.dir
+/home/alpaca/mv_slam/mv_frame/build/app/CMakeFiles/edit_cache.dir
+/home/alpaca/mv_slam/mv_frame/build/app/CMakeFiles/rebuild_cache.dir
