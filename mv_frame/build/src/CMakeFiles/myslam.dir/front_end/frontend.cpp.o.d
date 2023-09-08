@@ -564,6 +564,7 @@ src/CMakeFiles/myslam.dir/front_end/frontend.cpp.o: \
  /home/alpaca/mv_slam/mv_frame/include/myslam/map/map.h \
  /home/alpaca/mv_slam/mv_frame/include/myslam/map/mappoint.h \
  /home/alpaca/mv_slam/mv_frame/include/myslam/data_pretreat/dataset.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/data_pretreat/rgbd_dataset.h \
  /home/alpaca/mv_slam/mv_frame/include/myslam/front_end/frontend.h \
  /home/alpaca/mv_slam/mv_frame/include/myslam/viewer/viewer.h \
  /usr/local/include/pangolin/pangolin.h \

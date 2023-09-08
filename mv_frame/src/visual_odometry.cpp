@@ -30,23 +30,47 @@ namespace myslam
             return false;
         }
 
-        dataset_ =
-            Dataset::Ptr(new Dataset(Config::Get<std::string>("dataset_dir")));
-        CHECK_EQ(dataset_->Init(), true);
+        // TODO 添加判断语句 if (rgbd) dataset_ = rgbdDataset...
+        if (sensor_ == VisualOdometry::STEREO)
+        {
+            dataset_ =
+                Dataset::Ptr(new Dataset(Config::Get<std::string>("dataset_dir")));
+            CHECK_EQ(dataset_->Init(), true);
+        }
+        else if (sensor_ == VisualOdometry::RGBD)
+        {
+            rgbd_dataset_ =
+                RgbdDataset::Ptr(new RgbdDataset(Config::Get<std::string>("dataset_dir")));
+            CHECK_EQ(rgbd_dataset_->Init(), true);
+        }
 
         // create components and links
         frontend_ = Frontend::Ptr(new Frontend(sensor_));
-        backend_ = Backend::Ptr(new Backend);
+        backend_ = Backend::Ptr(new Backend(sensor_));
         map_ = Map::Ptr(new Map);
         viewer_ = Viewer::Ptr(new Viewer);
 
         frontend_->SetBackend(backend_);
         frontend_->SetMap(map_);
         frontend_->SetViewer(viewer_);
-        frontend_->SetCameras(dataset_->GetCamera(0), dataset_->GetCamera(1)); // 取左右灰度相机
 
-        backend_->SetMap(map_);
-        backend_->SetCameras(dataset_->GetCamera(0), dataset_->GetCamera(1));
+        if (sensor_ == VisualOdometry::STEREO)
+        {
+            frontend_->SetCameras(dataset_->GetCamera(0), dataset_->GetCamera(1)); // 取左右灰度相机
+
+            backend_->SetMap(map_);
+
+            backend_->SetCameras(dataset_->GetCamera(0), dataset_->GetCamera(1));
+        }
+        else if (sensor_ == VisualOdometry::RGBD)
+        {
+            // TODO rgbd remove camera1
+            frontend_->SetCameras(rgbd_dataset_->GetCamera(0)); // 取左右灰度相机
+
+            backend_->SetMap(map_);
+            // TODO rgbd remove camera1
+            backend_->SetCameras(rgbd_dataset_->GetCamera(0));
+        }
 
         viewer_->SetMap(map_);
 
@@ -60,6 +84,7 @@ namespace myslam
             LOG(INFO) << "VO is running";
             if (Step() == false)
             {
+                LOG(INFO) << "Step == false";
                 break;
             }
         }
@@ -73,7 +98,16 @@ namespace myslam
     // 读不出数据就会停止
     bool VisualOdometry::Step()
     {
-        Frame::Ptr new_frame = dataset_->NextFrame();
+        Frame::Ptr new_frame;
+        if (sensor_ == VisualOdometry::STEREO)
+        {
+            new_frame = dataset_->NextFrame();
+        }
+        else if (sensor_ == VisualOdometry::RGBD)
+        {
+
+            new_frame = rgbd_dataset_->NextFrame();
+        }
         if (new_frame == nullptr)
             return false;
 

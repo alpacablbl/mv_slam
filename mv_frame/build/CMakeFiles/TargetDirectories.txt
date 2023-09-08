@@ -4,5 +4,6 @@
 /home/alpaca/mv_slam/mv_frame/build/src/CMakeFiles/edit_cache.dir
 /home/alpaca/mv_slam/mv_frame/build/src/CMakeFiles/rebuild_cache.dir
 /home/alpaca/mv_slam/mv_frame/build/app/CMakeFiles/run_kitti_stereo.dir
+/home/alpaca/mv_slam/mv_frame/build/app/CMakeFiles/run_rgbd_tum.dir
 /home/alpaca/mv_slam/mv_frame/build/app/CMakeFiles/edit_cache.dir
 /home/alpaca/mv_slam/mv_frame/build/app/CMakeFiles/rebuild_cache.dir

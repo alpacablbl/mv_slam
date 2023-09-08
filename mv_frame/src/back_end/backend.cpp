@@ -2,6 +2,7 @@
 // Created by gaoxiang on 19-5-2.
 //
 
+#include "myslam/visual_odometry.h"
 #include "myslam/back_end/backend.h"
 #include "myslam/tools/algorithm.h"
 #include "myslam/feature/feature.h"
@@ -12,7 +13,7 @@
 namespace myslam
 {
 
-    Backend::Backend()
+    Backend::Backend(const int sensor) : bsensor_(sensor)
     {
         backend_running_.store(true);
         backend_thread_ = std::thread(std::bind(&Backend::BackendLoop, this));
@@ -82,7 +83,12 @@ namespace myslam
         // K 和左右外参
         Mat33 K = cam_left_->K();
         SE3 left_ext = cam_left_->pose();
-        SE3 right_ext = cam_right_->pose();
+        SE3 right_ext;
+        if (bsensor_ == VisualOdometry::STEREO)
+            right_ext = cam_right_->pose();
+        else if (bsensor_ == VisualOdometry::RGBD)
+        {
+        }
 
         // edges
         int index = 1;
@@ -105,13 +111,21 @@ namespace myslam
 
                 auto frame = feat->frame_.lock();
                 EdgeProjection *edge = nullptr;
-                if (feat->is_on_left_image_)
+
+                if (bsensor_ == VisualOdometry::STEREO)
+                {
+                    if (feat->is_on_left_image_)
+                    {
+                        edge = new EdgeProjection(K, left_ext);
+                    }
+                    else
+                    {
+                        edge = new EdgeProjection(K, right_ext);
+                    }
+                }
+                else if (bsensor_ == VisualOdometry::RGBD)
                 {
                     edge = new EdgeProjection(K, left_ext);
-                }
-                else
-                {
-                    edge = new EdgeProjection(K, right_ext);
                 }
 
                 // 如果landmark还没有被加入优化，则新加一个顶点

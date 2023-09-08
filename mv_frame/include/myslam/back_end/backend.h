@@ -23,15 +23,21 @@ namespace myslam
     public:
         EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
         typedef std::shared_ptr<Backend> Ptr;
+        int bsensor_;
 
         /// 构造函数中启动优化线程并挂起
-        Backend();
+        Backend(const int sensor);
 
         // 设置左右目的相机，用于获得内外参
         void SetCameras(Camera::Ptr left, Camera::Ptr right)
         {
             cam_left_ = left;
             cam_right_ = right;
+        }
+
+        void SetCameras(Camera::Ptr left)
+        {
+            cam_left_ = left;
         }
 
         /// 设置地图

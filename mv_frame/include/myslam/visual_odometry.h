@@ -5,6 +5,7 @@
 #include "myslam/back_end/backend.h"
 #include "myslam/common_include.h"
 #include "myslam/data_pretreat/dataset.h"
+#include "myslam/data_pretreat/rgbd_dataset.h"
 #include "myslam/front_end/frontend.h"
 #include "myslam/viewer/viewer.h"
 
@@ -60,6 +61,7 @@ namespace myslam
 
         // dataset
         Dataset::Ptr dataset_ = nullptr;
+        RgbdDataset::Ptr rgbd_dataset_ = nullptr;
     };
 } // namespace myslam
 

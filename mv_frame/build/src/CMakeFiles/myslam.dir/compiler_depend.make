@@ -73,7 +73,6 @@ src/CMakeFiles/myslam.dir/back_end/backend.cpp.o: ../src/back_end/backend.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/stdexcept \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
@@ -145,13 +144,10 @@ src/CMakeFiles/myslam.dir/back_end/backend.cpp.o: ../src/back_end/backend.cpp \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/c++/9/cstdio \
   /usr/include/stdio.h \
@@ -159,8 +155,6 @@ src/CMakeFiles/myslam.dir/back_end/backend.cpp.o: ../src/back_end/backend.cpp \
   /usr/include/x86_64-linux-gnu/bits/_G_config.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/bits/functional_hash.h \
   /usr/include/c++/9/bits/basic_string.tcc \
   /usr/include/c++/9/bits/unique_lock.h \
@@ -240,7 +234,6 @@ src/CMakeFiles/myslam.dir/back_end/backend.cpp.o: ../src/back_end/backend.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/bits/sstream.tcc \
   /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
@@ -249,7 +242,6 @@ src/CMakeFiles/myslam.dir/back_end/backend.cpp.o: ../src/back_end/backend.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
   /usr/include/c++/9/stdlib.h \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h \
   /usr/include/c++/9/cstddef \
   /usr/include/c++/9/cassert \
   /usr/include/assert.h \
@@ -258,8 +250,6 @@ src/CMakeFiles/myslam.dir/back_end/backend.cpp.o: ../src/back_end/backend.cpp \
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -511,7 +501,6 @@ src/CMakeFiles/myslam.dir/back_end/backend.cpp.o: ../src/back_end/backend.cpp \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/local/include/glog/platform.h \
   /usr/local/include/glog/export.h \
   /usr/include/inttypes.h \
@@ -683,7 +672,6 @@ src/CMakeFiles/myslam.dir/camera.cpp.o: ../src/camera.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/stdexcept \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
@@ -755,13 +743,10 @@ src/CMakeFiles/myslam.dir/camera.cpp.o: ../src/camera.cpp \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/c++/9/cstdio \
   /usr/include/stdio.h \
@@ -769,8 +754,6 @@ src/CMakeFiles/myslam.dir/camera.cpp.o: ../src/camera.cpp \
   /usr/include/x86_64-linux-gnu/bits/_G_config.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/bits/functional_hash.h \
   /usr/include/c++/9/bits/basic_string.tcc \
   /usr/include/c++/9/bits/unique_lock.h \
@@ -850,7 +833,6 @@ src/CMakeFiles/myslam.dir/camera.cpp.o: ../src/camera.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/bits/sstream.tcc \
   /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
@@ -859,7 +841,6 @@ src/CMakeFiles/myslam.dir/camera.cpp.o: ../src/camera.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
   /usr/include/c++/9/stdlib.h \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h \
   /usr/include/c++/9/cstddef \
   /usr/include/c++/9/cassert \
   /usr/include/assert.h \
@@ -868,8 +849,6 @@ src/CMakeFiles/myslam.dir/camera.cpp.o: ../src/camera.cpp \
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -1121,7 +1100,6 @@ src/CMakeFiles/myslam.dir/camera.cpp.o: ../src/camera.cpp \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/local/include/glog/platform.h \
   /usr/local/include/glog/export.h \
   /usr/include/inttypes.h \
@@ -1202,7 +1180,6 @@ src/CMakeFiles/myslam.dir/config/config.cpp.o: ../src/config/config.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/stdexcept \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
@@ -1274,13 +1251,10 @@ src/CMakeFiles/myslam.dir/config/config.cpp.o: ../src/config/config.cpp \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/c++/9/cstdio \
   /usr/include/stdio.h \
@@ -1288,8 +1262,6 @@ src/CMakeFiles/myslam.dir/config/config.cpp.o: ../src/config/config.cpp \
   /usr/include/x86_64-linux-gnu/bits/_G_config.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/bits/functional_hash.h \
   /usr/include/c++/9/bits/basic_string.tcc \
   /usr/include/c++/9/bits/unique_lock.h \
@@ -1369,7 +1341,6 @@ src/CMakeFiles/myslam.dir/config/config.cpp.o: ../src/config/config.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/bits/sstream.tcc \
   /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
@@ -1378,7 +1349,6 @@ src/CMakeFiles/myslam.dir/config/config.cpp.o: ../src/config/config.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
   /usr/include/c++/9/stdlib.h \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h \
   /usr/include/c++/9/cstddef \
   /usr/include/c++/9/cassert \
   /usr/include/assert.h \
@@ -1387,8 +1357,6 @@ src/CMakeFiles/myslam.dir/config/config.cpp.o: ../src/config/config.cpp \
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -1640,7 +1608,6 @@ src/CMakeFiles/myslam.dir/config/config.cpp.o: ../src/config/config.cpp \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/local/include/glog/platform.h \
   /usr/local/include/glog/export.h \
   /usr/include/inttypes.h \
@@ -1722,7 +1689,6 @@ src/CMakeFiles/myslam.dir/data_pretreat/dataset.cpp.o: ../src/data_pretreat/data
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/stdexcept \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
@@ -1794,13 +1760,10 @@ src/CMakeFiles/myslam.dir/data_pretreat/dataset.cpp.o: ../src/data_pretreat/data
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/c++/9/cstdio \
   /usr/include/stdio.h \
@@ -1808,8 +1771,6 @@ src/CMakeFiles/myslam.dir/data_pretreat/dataset.cpp.o: ../src/data_pretreat/data
   /usr/include/x86_64-linux-gnu/bits/_G_config.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/bits/functional_hash.h \
   /usr/include/c++/9/bits/basic_string.tcc \
   /usr/include/c++/9/bits/unique_lock.h \
@@ -1889,7 +1850,6 @@ src/CMakeFiles/myslam.dir/data_pretreat/dataset.cpp.o: ../src/data_pretreat/data
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/bits/sstream.tcc \
   /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
@@ -1898,7 +1858,6 @@ src/CMakeFiles/myslam.dir/data_pretreat/dataset.cpp.o: ../src/data_pretreat/data
   /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
   /usr/include/c++/9/stdlib.h \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h \
   /usr/include/c++/9/cstddef \
   /usr/include/c++/9/cassert \
   /usr/include/assert.h \
@@ -1907,8 +1866,6 @@ src/CMakeFiles/myslam.dir/data_pretreat/dataset.cpp.o: ../src/data_pretreat/data
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -2160,7 +2117,6 @@ src/CMakeFiles/myslam.dir/data_pretreat/dataset.cpp.o: ../src/data_pretreat/data
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/local/include/glog/platform.h \
   /usr/local/include/glog/export.h \
   /usr/include/inttypes.h \
@@ -2683,7 +2639,6 @@ src/CMakeFiles/myslam.dir/data_pretreat/rgbd_dataset.cpp.o: ../src/data_pretreat
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/stdexcept \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
@@ -2755,13 +2710,10 @@ src/CMakeFiles/myslam.dir/data_pretreat/rgbd_dataset.cpp.o: ../src/data_pretreat
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/c++/9/cstdio \
   /usr/include/stdio.h \
@@ -2769,8 +2721,6 @@ src/CMakeFiles/myslam.dir/data_pretreat/rgbd_dataset.cpp.o: ../src/data_pretreat
   /usr/include/x86_64-linux-gnu/bits/_G_config.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/bits/functional_hash.h \
   /usr/include/c++/9/bits/basic_string.tcc \
   /usr/include/c++/9/bits/unique_lock.h \
@@ -2850,7 +2800,6 @@ src/CMakeFiles/myslam.dir/data_pretreat/rgbd_dataset.cpp.o: ../src/data_pretreat
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/bits/sstream.tcc \
   /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
@@ -2859,7 +2808,6 @@ src/CMakeFiles/myslam.dir/data_pretreat/rgbd_dataset.cpp.o: ../src/data_pretreat
   /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
   /usr/include/c++/9/stdlib.h \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h \
   /usr/include/c++/9/cstddef \
   /usr/include/c++/9/cassert \
   /usr/include/assert.h \
@@ -2868,8 +2816,6 @@ src/CMakeFiles/myslam.dir/data_pretreat/rgbd_dataset.cpp.o: ../src/data_pretreat
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -3121,7 +3067,6 @@ src/CMakeFiles/myslam.dir/data_pretreat/rgbd_dataset.cpp.o: ../src/data_pretreat
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/local/include/glog/platform.h \
   /usr/local/include/glog/export.h \
   /usr/include/inttypes.h \
@@ -3634,7 +3579,6 @@ src/CMakeFiles/myslam.dir/feature/feature.cpp.o: ../src/feature/feature.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
@@ -3704,13 +3648,10 @@ src/CMakeFiles/myslam.dir/feature/feature.cpp.o: ../src/feature/feature.cpp \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/c++/9/cstdio \
   /usr/include/stdio.h \
@@ -3718,8 +3659,6 @@ src/CMakeFiles/myslam.dir/feature/feature.cpp.o: ../src/feature/feature.cpp \
   /usr/include/x86_64-linux-gnu/bits/_G_config.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -3773,8 +3712,6 @@ src/CMakeFiles/myslam.dir/feature/feature.cpp.o: ../src/feature/feature.cpp \
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/cmath \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -3785,7 +3722,6 @@ src/CMakeFiles/myslam.dir/feature/feature.cpp.o: ../src/feature/feature.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/local/include/opencv2/core/ptr.inl.hpp \
   /usr/local/include/opencv2/core/neon_utils.hpp \
   /usr/local/include/opencv2/core/vsx_utils.hpp \
@@ -3875,7 +3811,6 @@ src/CMakeFiles/myslam.dir/feature/feature.cpp.o: ../src/feature/feature.cpp \
   /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
   /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
   /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h \
   /usr/include/c++/9/cassert \
   /usr/include/eigen3/Eigen/src/Core/util/Constants.h \
   /usr/include/eigen3/Eigen/src/Core/util/Meta.h \
@@ -4082,7 +4017,6 @@ src/CMakeFiles/myslam.dir/feature/feature.cpp.o: ../src/feature/feature.cpp \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/local/include/glog/platform.h \
   /usr/local/include/glog/export.h \
   /usr/include/inttypes.h \
@@ -4153,16 +4087,13 @@ src/CMakeFiles/myslam.dir/front_end/frontend.cpp.o: ../src/front_end/frontend.cp
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/c++/9/array \
   /usr/include/c++/9/utility \
@@ -4207,7 +4138,6 @@ src/CMakeFiles/myslam.dir/front_end/frontend.cpp.o: ../src/front_end/frontend.cp
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/bits/allocator.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
   /usr/include/c++/9/ext/new_allocator.h \
@@ -4248,8 +4178,6 @@ src/CMakeFiles/myslam.dir/front_end/frontend.cpp.o: ../src/front_end/frontend.cp
   /usr/include/x86_64-linux-gnu/bits/_G_config.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -4281,8 +4209,6 @@ src/CMakeFiles/myslam.dir/front_end/frontend.cpp.o: ../src/front_end/frontend.cp
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/cmath \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -4293,7 +4219,6 @@ src/CMakeFiles/myslam.dir/front_end/frontend.cpp.o: ../src/front_end/frontend.cp
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/local/include/opencv2/core/ptr.inl.hpp \
   /usr/local/include/opencv2/core/neon_utils.hpp \
   /usr/local/include/opencv2/core/vsx_utils.hpp \
@@ -4528,7 +4453,6 @@ src/CMakeFiles/myslam.dir/front_end/frontend.cpp.o: ../src/front_end/frontend.cp
   /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
   /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
   /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h \
   /usr/include/c++/9/cassert \
   /usr/include/eigen3/Eigen/src/Core/util/Constants.h \
   /usr/include/eigen3/Eigen/src/Core/util/Meta.h \
@@ -4735,7 +4659,6 @@ src/CMakeFiles/myslam.dir/front_end/frontend.cpp.o: ../src/front_end/frontend.cp
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/local/include/glog/platform.h \
   /usr/local/include/glog/export.h \
   /usr/include/inttypes.h \
@@ -4748,6 +4671,7 @@ src/CMakeFiles/myslam.dir/front_end/frontend.cpp.o: ../src/front_end/frontend.cp
   ../include/myslam/map/map.h \
   ../include/myslam/map/mappoint.h \
   ../include/myslam/data_pretreat/dataset.h \
+  ../include/myslam/data_pretreat/rgbd_dataset.h \
   ../include/myslam/front_end/frontend.h \
   ../include/myslam/viewer/viewer.h \
   /usr/local/include/pangolin/pangolin.h \
@@ -4946,7 +4870,6 @@ src/CMakeFiles/myslam.dir/map/frame.cpp.o: ../src/map/frame.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/stdexcept \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
@@ -5018,13 +4941,10 @@ src/CMakeFiles/myslam.dir/map/frame.cpp.o: ../src/map/frame.cpp \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/c++/9/cstdio \
   /usr/include/stdio.h \
@@ -5032,8 +4952,6 @@ src/CMakeFiles/myslam.dir/map/frame.cpp.o: ../src/map/frame.cpp \
   /usr/include/x86_64-linux-gnu/bits/_G_config.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/bits/functional_hash.h \
   /usr/include/c++/9/bits/basic_string.tcc \
   /usr/include/c++/9/bits/unique_lock.h \
@@ -5113,7 +5031,6 @@ src/CMakeFiles/myslam.dir/map/frame.cpp.o: ../src/map/frame.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/bits/sstream.tcc \
   /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
@@ -5122,7 +5039,6 @@ src/CMakeFiles/myslam.dir/map/frame.cpp.o: ../src/map/frame.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
   /usr/include/c++/9/stdlib.h \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h \
   /usr/include/c++/9/cstddef \
   /usr/include/c++/9/cassert \
   /usr/include/assert.h \
@@ -5131,8 +5047,6 @@ src/CMakeFiles/myslam.dir/map/frame.cpp.o: ../src/map/frame.cpp \
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -5384,7 +5298,6 @@ src/CMakeFiles/myslam.dir/map/frame.cpp.o: ../src/map/frame.cpp \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/local/include/glog/platform.h \
   /usr/local/include/glog/export.h \
   /usr/include/inttypes.h \
@@ -5465,7 +5378,6 @@ src/CMakeFiles/myslam.dir/map/map.cpp.o: ../src/map/map.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/stdexcept \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
@@ -5537,13 +5449,10 @@ src/CMakeFiles/myslam.dir/map/map.cpp.o: ../src/map/map.cpp \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/c++/9/cstdio \
   /usr/include/stdio.h \
@@ -5551,8 +5460,6 @@ src/CMakeFiles/myslam.dir/map/map.cpp.o: ../src/map/map.cpp \
   /usr/include/x86_64-linux-gnu/bits/_G_config.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/bits/functional_hash.h \
   /usr/include/c++/9/bits/basic_string.tcc \
   /usr/include/c++/9/bits/unique_lock.h \
@@ -5632,7 +5539,6 @@ src/CMakeFiles/myslam.dir/map/map.cpp.o: ../src/map/map.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/bits/sstream.tcc \
   /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
@@ -5641,7 +5547,6 @@ src/CMakeFiles/myslam.dir/map/map.cpp.o: ../src/map/map.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
   /usr/include/c++/9/stdlib.h \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h \
   /usr/include/c++/9/cstddef \
   /usr/include/c++/9/cassert \
   /usr/include/assert.h \
@@ -5650,8 +5555,6 @@ src/CMakeFiles/myslam.dir/map/map.cpp.o: ../src/map/map.cpp \
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -5903,7 +5806,6 @@ src/CMakeFiles/myslam.dir/map/map.cpp.o: ../src/map/map.cpp \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/local/include/glog/platform.h \
   /usr/local/include/glog/export.h \
   /usr/include/inttypes.h \
@@ -5992,7 +5894,6 @@ src/CMakeFiles/myslam.dir/map/mappoint.cpp.o: ../src/map/mappoint.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/stdexcept \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
@@ -6064,13 +5965,10 @@ src/CMakeFiles/myslam.dir/map/mappoint.cpp.o: ../src/map/mappoint.cpp \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/c++/9/cstdio \
   /usr/include/stdio.h \
@@ -6078,8 +5976,6 @@ src/CMakeFiles/myslam.dir/map/mappoint.cpp.o: ../src/map/mappoint.cpp \
   /usr/include/x86_64-linux-gnu/bits/_G_config.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/bits/functional_hash.h \
   /usr/include/c++/9/bits/basic_string.tcc \
   /usr/include/c++/9/bits/unique_lock.h \
@@ -6159,7 +6055,6 @@ src/CMakeFiles/myslam.dir/map/mappoint.cpp.o: ../src/map/mappoint.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/bits/sstream.tcc \
   /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
@@ -6168,7 +6063,6 @@ src/CMakeFiles/myslam.dir/map/mappoint.cpp.o: ../src/map/mappoint.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
   /usr/include/c++/9/stdlib.h \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h \
   /usr/include/c++/9/cstddef \
   /usr/include/c++/9/cassert \
   /usr/include/assert.h \
@@ -6177,8 +6071,6 @@ src/CMakeFiles/myslam.dir/map/mappoint.cpp.o: ../src/map/mappoint.cpp \
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -6430,7 +6322,6 @@ src/CMakeFiles/myslam.dir/map/mappoint.cpp.o: ../src/map/mappoint.cpp \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/local/include/glog/platform.h \
   /usr/local/include/glog/export.h \
   /usr/include/inttypes.h \
@@ -6534,7 +6425,6 @@ src/CMakeFiles/myslam.dir/viewer/viewer.cpp.o: ../src/viewer/viewer.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
@@ -6586,13 +6476,10 @@ src/CMakeFiles/myslam.dir/viewer/viewer.cpp.o: ../src/viewer/viewer.cpp \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/c++/9/cstdio \
   /usr/include/stdio.h \
@@ -6600,8 +6487,6 @@ src/CMakeFiles/myslam.dir/viewer/viewer.cpp.o: ../src/viewer/viewer.cpp \
   /usr/include/x86_64-linux-gnu/bits/_G_config.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -6691,21 +6576,17 @@ src/CMakeFiles/myslam.dir/viewer/viewer.cpp.o: ../src/viewer/viewer.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/mmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
   /usr/include/c++/9/stdlib.h \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h \
   /usr/include/c++/9/cassert \
   /usr/include/assert.h \
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -7021,7 +6902,6 @@ src/CMakeFiles/myslam.dir/viewer/viewer.cpp.o: ../src/viewer/viewer.cpp \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/local/include/glog/platform.h \
   /usr/local/include/glog/export.h \
   /usr/local/include/gflags/gflags.h \
@@ -7228,7 +7108,6 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/stdexcept \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
@@ -7300,13 +7179,10 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/c++/9/cstdio \
   /usr/include/stdio.h \
@@ -7314,8 +7190,6 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
   /usr/include/x86_64-linux-gnu/bits/_G_config.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/bits/functional_hash.h \
   /usr/include/c++/9/bits/basic_string.tcc \
   /usr/include/c++/9/bits/unique_lock.h \
@@ -7395,7 +7269,6 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/bits/sstream.tcc \
   /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
@@ -7404,7 +7277,6 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
   /usr/include/c++/9/stdlib.h \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h \
   /usr/include/c++/9/cstddef \
   /usr/include/c++/9/cassert \
   /usr/include/assert.h \
@@ -7413,8 +7285,6 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -7666,7 +7536,6 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/local/include/glog/platform.h \
   /usr/local/include/glog/export.h \
   /usr/include/inttypes.h \
@@ -7679,6 +7548,7 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
   ../include/myslam/map/map.h \
   ../include/myslam/map/mappoint.h \
   ../include/myslam/data_pretreat/dataset.h \
+  ../include/myslam/data_pretreat/rgbd_dataset.h \
   ../include/myslam/front_end/frontend.h \
   /usr/local/include/opencv2/features2d.hpp \
   /usr/local/include/opencv2/flann/miniflann.hpp \
@@ -8152,6 +8022,8 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/boost/type_traits/is_nothrow_move_constructible.hpp:
 
+/usr/include/boost/utility/enable_if.hpp:
+
 /usr/include/boost/type_traits/is_const.hpp:
 
 /usr/include/boost/type_traits/is_volatile.hpp:
@@ -8334,6 +8206,8 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/suitesparse/cs.h:
 
+/usr/local/include/g2o/core/robust_kernel_impl.h:
+
 /usr/local/include/g2o/stuff/property.h:
 
 /usr/local/include/g2o/core/optimization_algorithm.h:
@@ -8372,23 +8246,31 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/c++/9/locale:
 
-/usr/include/c++/9/iomanip:
+/usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h:
 
-/usr/include/c++/9/bits/fstream.tcc:
+/usr/include/c++/9/string:
 
-/usr/include/boost/optional/detail/optional_factory_support.hpp:
+/usr/include/c++/9/climits:
 
-/usr/local/include/g2o/core/optimization_algorithm_levenberg.h:
+/usr/include/c++/9/bits/uniform_int_dist.h:
 
-/usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h:
+/usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
 
-/usr/include/c++/9/bits/codecvt.h:
+/usr/local/include/opencv2/dnn/dnn.hpp:
 
-/usr/local/include/g2o/core/base_vertex.hpp:
+/usr/include/boost/predef/architecture/sys390.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h:
 
 /usr/local/include/pangolin/image/image.h:
 
 ../include/myslam/common_include.h:
+
+/usr/include/boost/predef/compiler/gcc_xml.h:
+
+/usr/include/boost/predef/language/stdcpp.h:
+
+/usr/include/string.h:
 
 /usr/include/c++/9/cstring:
 
@@ -8406,8 +8288,6 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h:
-
 /usr/include/boost/predef/platform.h:
 
 /usr/include/boost/predef/architecture/m68k.h:
@@ -8420,17 +8300,9 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/NoAlias.h:
 
-/usr/local/include/g2o/core/block_solver.h:
-
-/usr/include/c++/9/sstream:
-
 /usr/include/boost/current_function.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/Solve.h:
-
-/usr/local/include/g2o/core/robust_kernel_impl.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathinline.h:
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
@@ -8552,8 +8424,6 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/c++/9/bits/locale_classes.h:
 
-/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
-
 /usr/include/boost/predef/hardware.h:
 
 /usr/include/c++/9/bits/ios_base.h:
@@ -8630,27 +8500,11 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/c++/9/cstddef:
 
-/usr/include/boost/predef/compiler/gcc_xml.h:
-
-/usr/include/boost/predef/language/stdcpp.h:
-
-/usr/include/string.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
-/usr/local/include/opencv2/core/check.hpp:
-
 /usr/include/boost/optional/bad_optional_access.hpp:
 
 /usr/local/include/glog/logging.h:
 
 /usr/include/c++/9/bits/exception_ptr.h:
-
-/usr/include/boost/utility/enable_if.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/select2.h:
-
-/usr/local/include/opencv2/core/ptr.inl.hpp:
 
 /usr/include/c++/9/cstdarg:
 
@@ -8688,14 +8542,6 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/c++/9/ext/alloc_traits.h:
 
-/usr/include/c++/9/complex:
-
-/usr/include/eigen3/Eigen/src/Core/Transpose.h:
-
-/usr/local/include/opencv2/flann/params.h:
-
-/usr/include/c++/9/bits/exception_defines.h:
-
 /usr/include/asm-generic/errno.h:
 
 /usr/include/c++/9/system_error:
@@ -8723,6 +8569,8 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/eigen3/Eigen/src/Core/Redux.h:
+
+/usr/include/c++/9/iomanip:
 
 /usr/include/endian.h:
 
@@ -8756,6 +8604,8 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
 
+/usr/local/include/g2o/core/base_vertex.hpp:
+
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /usr/include/eigen3/Eigen/src/Core/DiagonalProduct.h:
@@ -8785,6 +8635,8 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h:
 
 /usr/local/include/opencv2/core/matx.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
 /usr/include/c++/9/bits/stl_multimap.h:
 
@@ -8818,13 +8670,17 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
+/usr/include/limits.h:
+
+/usr/include/c++/9/bits/basic_ios.tcc:
+
+/usr/include/c++/9/bits/cxxabi_forced.h:
+
+/usr/include/c++/9/limits:
+
+/usr/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
+
 /usr/include/c++/9/ext/new_allocator.h:
-
-/usr/include/boost/predef/os/os400.h:
-
-/usr/local/include/g2o/core/solver.h:
-
-/usr/include/c++/9/condition_variable:
 
 /usr/include/c++/9/bits/stl_uninitialized.h:
 
@@ -8844,13 +8700,15 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/c++/9/type_traits:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
-
 /usr/local/include/g2o/core/base_edge.h:
+
+/usr/local/include/opencv2/flann/params.h:
+
+/usr/include/c++/9/bits/exception_defines.h:
+
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
+
+/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:
 
 /usr/include/wctype.h:
 
@@ -8904,16 +8762,6 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/errno.h:
 
-/usr/include/c++/9/bits/basic_ios.tcc:
-
-/usr/include/c++/9/bits/cxxabi_forced.h:
-
-/usr/include/c++/9/limits:
-
-/usr/include/limits.h:
-
-/usr/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
-
 /usr/local/include/opencv2/stitching/detail/util_inl.hpp:
 
 /usr/include/boost/smart_ptr/detail/local_counted_base.hpp:
@@ -8958,6 +8806,10 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
+
 /usr/local/include/opencv2/stitching/detail/warpers_inl.hpp:
 
 /usr/include/c++/9/ext/concurrence.h:
@@ -8986,17 +8838,15 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/c++/9/iostream:
 
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/local/include/opencv2/core/bufferpool.hpp:
+
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/math.h:
-
-/usr/include/boost/assert.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/c++/9/bits/atomic_base.h:
 
@@ -9011,6 +8861,8 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 /usr/local/include/opencv2/flann/dist.h:
 
 /usr/local/include/g2o/core/creators.h:
+
+/usr/include/c++/9/bits/codecvt.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
@@ -9055,14 +8907,6 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 /usr/local/include/g2o/core/linear_solver.h:
 
 /usr/include/eigen3/Eigen/src/Core/MatrixBase.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar2.h:
-
-/usr/include/c++/9/bits/stl_function.h:
-
-/usr/include/c++/9/deque:
-
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h:
 
@@ -9138,6 +8982,12 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
+/usr/include/c++/9/bits/stl_function.h:
+
+/usr/include/c++/9/deque:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
 /usr/include/c++/9/stdexcept:
 
 /usr/include/c++/9/cstdio:
@@ -9188,9 +9038,9 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/c++/9/debug/assertions.h:
 
-/usr/include/c++/9/string:
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h:
+/usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/c++/9/bits/stl_algobase.h:
 
@@ -9209,6 +9059,12 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 /usr/include/libintl.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/include/boost/predef/compiler/tendra.h:
+
+/usr/local/include/opencv2/core/cvstd.hpp:
+
+/usr/include/eigen3/Eigen/src/Cholesky/LDLT.h:
 
 /usr/include/c++/9/bits/std_abs.h:
 
@@ -9254,47 +9110,9 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/eigen3/Eigen/Eigenvalues:
 
-/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
+/usr/include/c++/9/complex:
 
-/usr/include/boost/preprocessor/detail/is_binary.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/x86_64-linux-gnu/bits/libio.h:
-
-/usr/include/c++/9/bits/random.h:
-
-/usr/include/c++/9/climits:
-
-/usr/include/c++/9/bits/uniform_int_dist.h:
-
-/usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
-
-/usr/local/include/opencv2/dnn/dnn.hpp:
-
-/usr/include/boost/predef/architecture/sys390.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h:
-
-/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:
-
-/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
-
-/usr/include/x86_64-linux-gnu/bits/locale.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
-/usr/local/include/opencv2/core/bufferpool.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
-/usr/include/boost/predef/compiler/tendra.h:
-
-/usr/include/eigen3/Eigen/src/Cholesky/LDLT.h:
-
-/usr/local/include/opencv2/core/cvstd.hpp:
+/usr/include/eigen3/Eigen/src/Core/Transpose.h:
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
@@ -9354,8 +9172,6 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/MathFunctions.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
-
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
 /usr/include/boost/predef/detail/os_detected.h:
@@ -9385,12 +9201,6 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:
-
-/usr/local/include/g2o/core/sparse_block_matrix.h:
-
-/usr/include/c++/9/vector:
-
-/usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h:
 
 /usr/include/eigen3/Eigen/src/Core/Visitor.h:
 
@@ -9626,6 +9436,12 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/eigen3/Eigen/src/Core/Replicate.h:
 
+/usr/include/c++/9/vector:
+
+/usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h:
+
+/usr/local/include/g2o/core/sparse_block_matrix.h:
+
 /usr/include/eigen3/Eigen/src/Core/Reverse.h:
 
 /usr/local/include/opencv2/opencv.hpp:
@@ -9708,12 +9524,6 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/eigen3/Eigen/src/Geometry/ParametrizedLine.h:
 
-/usr/include/boost/move/utility.hpp:
-
-/usr/include/c++/9/fstream:
-
-/usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h:
-
 /usr/local/include/opencv2/core.hpp:
 
 /usr/include/eigen3/Eigen/src/Geometry/Umeyama.h:
@@ -9758,13 +9568,19 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/include/c++/9/random:
 
+/usr/include/boost/preprocessor/detail/is_binary.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/libio.h:
+
+/usr/include/c++/9/bits/random.h:
+
 /usr/local/include/g2o/core/g2o_core_api.h:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/opt_random.h:
 
 /usr/local/include/fmt/ostream.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
 
 /usr/local/include/glog/platform.h:
 
@@ -9782,6 +9598,8 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/local/include/opencv2/core/base.hpp:
 
+/usr/local/include/opencv2/core/ptr.inl.hpp:
+
 /usr/include/boost/config/detail/select_platform_config.hpp:
 
 /usr/include/c++/9/debug/debug.h:
@@ -9791,6 +9609,8 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 /usr/local/include/opencv2/videostab/stabilizer.hpp:
 
 /usr/local/include/opencv2/core/optim.hpp:
+
+/usr/local/include/opencv2/core/check.hpp:
 
 /usr/include/eigen3/Eigen/src/Geometry/Homogeneous.h:
 
@@ -9825,12 +9645,6 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 /usr/include/unistd.h:
 
 /usr/include/x86_64-linux-gnu/bits/confname.h:
-
-/usr/include/x86_64-linux-gnu/bits/unistd.h:
-
-/usr/local/include/opencv2/core/cvstd.inl.hpp:
-
-/usr/local/include/g2o/core/jacobian_workspace.h:
 
 /usr/include/eigen3/Eigen/src/Core/VectorBlock.h:
 
@@ -9868,6 +9682,10 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 
 /usr/local/include/g2o/core/hyper_graph.h:
 
+/usr/local/include/opencv2/core/cvstd.inl.hpp:
+
+/usr/local/include/g2o/core/jacobian_workspace.h:
+
 /usr/include/boost/type_traits/is_destructible.hpp:
 
 /usr/include/eigen3/Eigen/StdVector:
@@ -9897,3 +9715,33 @@ src/CMakeFiles/myslam.dir/visual_odometry.cpp.o: ../src/visual_odometry.cpp \
 /usr/local/include/g2o/core/base_vertex.h:
 
 /usr/include/c++/9/stack:
+
+/usr/include/c++/9/sstream:
+
+/usr/local/include/g2o/core/block_solver.h:
+
+/usr/include/boost/predef/os/os400.h:
+
+/usr/include/c++/9/condition_variable:
+
+/usr/local/include/g2o/core/solver.h:
+
+/usr/include/boost/move/utility.hpp:
+
+/usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h:
+
+/usr/include/c++/9/fstream:
+
+/usr/include/boost/optional/detail/optional_factory_support.hpp:
+
+/usr/local/include/g2o/core/optimization_algorithm_levenberg.h:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h:
+
+/usr/include/boost/assert.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h:
+
+/usr/include/c++/9/bits/fstream.tcc:

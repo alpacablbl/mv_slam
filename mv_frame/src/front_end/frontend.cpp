@@ -32,7 +32,10 @@ namespace myslam
         switch (status_)
         {
         case FrontendStatus::INITING:
-            StereoInit();
+            if (fsensor_ == VisualOdometry::STEREO)
+                StereoInit();
+            else if (fsensor_ == VisualOdometry::RGBD)
+                RgbdInit();
             break;
         case FrontendStatus::TRACKING_GOOD:
         case FrontendStatus::TRACKING_BAD:
@@ -180,12 +183,37 @@ namespace myslam
         {
             if (current_frame_->features_left_[i]->map_point_.expired())
             {
+                // TODO 换算深度后映射成3D点加入到地图中
+                int x = current_frame_->features_left_[i]->position_.pt.x;
+                int y = current_frame_->features_left_[i]->position_.pt.y;
+                Vec2 temppix = {x, y};
+                x = cvRound(x);
+                y = cvRound(y);
+                double dd = 0;
+                ushort d = current_frame_->depth_.ptr<ushort>(y)[x];
 
-                Vec3 pworld = {current_frame_->features_left_[i]->position_.pt.x,
-                               current_frame_->features_left_[i]->position_.pt.y,
-                               current_frame_->depth};
+                if (d != 0)
+                {
+                    dd = double(d) / 5000.0;
+                }
+                else
+                {
+                    // check the nearby points
+                    int dx[4] = {-1, 0, 1, 0};
+                    int dy[4] = {0, -1, 0, 1};
+                    for (int i = 0; i < 4; i++)
+                    {
+                        d = current_frame_->depth_.ptr<ushort>(y + dy[i])[x + dx[i]];
+                        if (d != 0)
+                        {
+                            dd = double(d) / 5000.0;
+                        }
+                    }
+                }
+                Vec3 p1 = camera_left_->pixel2camera(temppix);
+                Vec3 pworld = dd * p1;
 
-                if (current_frame_->depth > 0)
+                if (dd > 0)
                 {
                     auto new_map_point = MapPoint::CreateNewMappoint();
                     pworld = current_pose_Twc * pworld;
@@ -288,13 +316,13 @@ namespace myslam
             }
         }
 
-        LOG(INFO) << "Outlier/Inlier in pose estimating: " << cnt_outlier << "/"
-                  << features.size() - cnt_outlier;
+        // LOG(INFO) << "Outlier/Inlier in pose estimating: " << cnt_outlier << "/"
+        //           << features.size() - cnt_outlier;
         // Set pose and outlier
         current_frame_->SetPose(vertex_pose->estimate());
 
-        LOG(INFO) << "Current Pose = \n"
-                  << current_frame_->Pose().matrix();
+        // LOG(INFO) << "Current Pose = \n"
+        //           << current_frame_->Pose().matrix();
 
         for (auto &feat : features)
         {
@@ -372,6 +400,26 @@ namespace myslam
             status_ = FrontendStatus::TRACKING_GOOD;
             if (viewer_)
             {
+                viewer_->AddCurrentFrame(current_frame_);
+                viewer_->UpdateMap();
+            }
+            return true;
+        }
+        return false;
+    }
+
+    // TODO RgbdInit (未改)
+    bool Frontend::RgbdInit()
+    {
+        int num_features_left = DetectFeatures();
+
+        bool build_map_success = BuildInitRgbdMap();
+        if (build_map_success)
+        {
+            status_ = FrontendStatus::TRACKING_GOOD;
+            if (viewer_)
+            {
+                // TODO 这俩可能也要单独改
                 viewer_->AddCurrentFrame(current_frame_);
                 viewer_->UpdateMap();
             }
@@ -505,11 +553,37 @@ namespace myslam
         for (size_t i = 0; i < current_frame_->features_left_.size(); ++i)
         {
 
-            Vec3 pworld = {current_frame_->features_left_[i]->position_.pt.x,
-                           current_frame_->features_left_[i]->position_.pt.y,
-                           current_frame_->depth};
+            // TODO depth要改成depth_ Mat类型
+            int x = current_frame_->features_left_[i]->position_.pt.x;
+            int y = current_frame_->features_left_[i]->position_.pt.y;
+            Vec2 temppix = {x, y};
+            x = cvRound(x);
+            y = cvRound(y);
+            double dd = 0;
+            ushort d = current_frame_->depth_.ptr<ushort>(y)[x];
 
-            if (current_frame_->depth > 0)
+            if (d != 0)
+            {
+                dd = double(d) / 5000.0;
+            }
+            else
+            {
+                // check the nearby points
+                int dx[4] = {-1, 0, 1, 0};
+                int dy[4] = {0, -1, 0, 1};
+                for (int i = 0; i < 4; i++)
+                {
+                    d = current_frame_->depth_.ptr<ushort>(y + dy[i])[x + dx[i]];
+                    if (d != 0)
+                    {
+                        dd = double(d) / 5000.0;
+                    }
+                }
+            }
+            Vec3 p1 = camera_left_->pixel2camera(temppix);
+            Vec3 pworld = dd * p1;
+
+            if (dd > 0)
             {
                 auto new_map_point = MapPoint::CreateNewMappoint();
 

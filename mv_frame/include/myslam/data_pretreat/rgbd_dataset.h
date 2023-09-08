@@ -1,5 +1,5 @@
-#ifndef MYSLAM_DATASET_H
-#define MYSLAM_DATASET_H
+#ifndef MYSLAM_RGBD_DATASET_H
+#define MYSLAM_RGBD_DATASET_H
 #include "myslam/camera.h"
 #include "myslam/common_include.h"
 #include "myslam/map/frame.h"
@@ -34,6 +34,9 @@ namespace myslam
     private:
         std::string dataset_path_;
         int current_image_index_ = 0;
+        int grbd_frame_index_ = 0;
+        std::vector<std::string> rgb_files_, depth_files_;
+        std::vector<double> rgb_times_, depth_times_;
 
         std::vector<Camera::Ptr> cameras_;
     };

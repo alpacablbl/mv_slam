@@ -142,6 +142,19 @@ run_kitti_stereo/fast:
 	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_kitti_stereo.dir/build.make app/CMakeFiles/run_kitti_stereo.dir/build
 .PHONY : run_kitti_stereo/fast
 
+#=============================================================================
+# Target rules for targets named run_rgbd_tum
+
+# Build rule for target.
+run_rgbd_tum: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_rgbd_tum
+.PHONY : run_rgbd_tum
+
+# fast build rule for target.
+run_rgbd_tum/fast:
+	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_rgbd_tum.dir/build.make app/CMakeFiles/run_rgbd_tum.dir/build
+.PHONY : run_rgbd_tum/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -152,6 +165,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... myslam"
 	@echo "... run_kitti_stereo"
+	@echo "... run_rgbd_tum"
 .PHONY : help
 
 

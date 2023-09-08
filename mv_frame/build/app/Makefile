@@ -130,6 +130,20 @@ run_kitti_stereo/fast:
 	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_kitti_stereo.dir/build.make app/CMakeFiles/run_kitti_stereo.dir/build
 .PHONY : run_kitti_stereo/fast
 
+# Convenience name for target.
+app/CMakeFiles/run_rgbd_tum.dir/rule:
+	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app/CMakeFiles/run_rgbd_tum.dir/rule
+.PHONY : app/CMakeFiles/run_rgbd_tum.dir/rule
+
+# Convenience name for target.
+run_rgbd_tum: app/CMakeFiles/run_rgbd_tum.dir/rule
+.PHONY : run_rgbd_tum
+
+# fast build rule for target.
+run_rgbd_tum/fast:
+	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_rgbd_tum.dir/build.make app/CMakeFiles/run_rgbd_tum.dir/build
+.PHONY : run_rgbd_tum/fast
+
 run_kitti_stereo.o: run_kitti_stereo.cpp.o
 .PHONY : run_kitti_stereo.o
 
@@ -154,6 +168,30 @@ run_kitti_stereo.cpp.s:
 	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_kitti_stereo.dir/build.make app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.s
 .PHONY : run_kitti_stereo.cpp.s
 
+run_rgbd_tum.o: run_rgbd_tum.cpp.o
+.PHONY : run_rgbd_tum.o
+
+# target to build an object file
+run_rgbd_tum.cpp.o:
+	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_rgbd_tum.dir/build.make app/CMakeFiles/run_rgbd_tum.dir/run_rgbd_tum.cpp.o
+.PHONY : run_rgbd_tum.cpp.o
+
+run_rgbd_tum.i: run_rgbd_tum.cpp.i
+.PHONY : run_rgbd_tum.i
+
+# target to preprocess a source file
+run_rgbd_tum.cpp.i:
+	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_rgbd_tum.dir/build.make app/CMakeFiles/run_rgbd_tum.dir/run_rgbd_tum.cpp.i
+.PHONY : run_rgbd_tum.cpp.i
+
+run_rgbd_tum.s: run_rgbd_tum.cpp.s
+.PHONY : run_rgbd_tum.s
+
+# target to generate assembly for a file
+run_rgbd_tum.cpp.s:
+	cd /home/alpaca/mv_slam/mv_frame/build && $(MAKE) $(MAKESILENT) -f app/CMakeFiles/run_rgbd_tum.dir/build.make app/CMakeFiles/run_rgbd_tum.dir/run_rgbd_tum.cpp.s
+.PHONY : run_rgbd_tum.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -163,9 +201,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... run_kitti_stereo"
+	@echo "... run_rgbd_tum"
 	@echo "... run_kitti_stereo.o"
 	@echo "... run_kitti_stereo.i"
 	@echo "... run_kitti_stereo.s"
+	@echo "... run_rgbd_tum.o"
+	@echo "... run_rgbd_tum.i"
+	@echo "... run_rgbd_tum.s"
 .PHONY : help
 
 

@@ -53,6 +53,11 @@ namespace myslam
             camera_right_ = right;
         }
 
+        void SetCameras(Camera::Ptr left)
+        {
+            camera_left_ = left;
+        }
+
     private:
         /**
          * Track in normal mode
@@ -83,6 +88,12 @@ namespace myslam
          * @return true if success
          */
         bool InsertKeyframe();
+
+        /**
+         * Try init the frontend with stereo images saved in current_frame_
+         * @return true if success
+         */
+        bool RgbdInit();
 
         /**
          * Try init the frontend with stereo images saved in current_frame_

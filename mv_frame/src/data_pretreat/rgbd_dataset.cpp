@@ -10,16 +10,34 @@ namespace myslam
 {
 
     RgbdDataset::RgbdDataset(const std::string &dataset_path)
-        : dataset_path_(dataset_path) {}
+        : dataset_path_(dataset_path), grbd_frame_index_(0) {}
 
     bool RgbdDataset::Init()
     {
         // read camera intrinsics and extrinsics
-        ifstream fin(dataset_path_ + "/calib.txt");
+        ifstream fin(dataset_path_ + "/associations.txt");
         if (!fin)
         {
-            LOG(ERROR) << "cannot find " << dataset_path_ << "/calib.txt!";
+            LOG(ERROR) << "cannot find " << dataset_path_ << "/associations.txt";
             return false;
+        }
+
+        // 将对齐的rgb图，深度图和时间戳存入vector
+        std::string assPath = dataset_path_ + "/associations.txt";
+        std::ifstream txt;
+        txt.open(assPath.data());
+        assert(txt.is_open());
+        while (!txt.eof())
+        {
+            string rgb_time, rgb_file, depth_time, depth_file;
+            txt >> rgb_time >> rgb_file >> depth_time >> depth_file;
+            rgb_times_.push_back(atof(rgb_time.c_str()));
+            depth_times_.push_back(atof(depth_time.c_str()));
+            rgb_files_.push_back(dataset_path_ + "/" + rgb_file);
+            depth_files_.push_back(dataset_path_ + "/" + depth_file);
+
+            if (txt.good() == false)
+                break;
         }
 
         // 目前直接硬编码相机内参
@@ -50,32 +68,27 @@ namespace myslam
     // 读入下一帧
     Frame::Ptr RgbdDataset::NextFrame()
     {
-        boost::format fmt("%s/image_%d/%06d.png");
-        cv::Mat image_left, image_right;
-        // read images
-        image_left =
-            cv::imread((fmt % dataset_path_ % 0 % current_image_index_).str(),
-                       cv::IMREAD_GRAYSCALE);
-        image_right =
-            cv::imread((fmt % dataset_path_ % 1 % current_image_index_).str(),
-                       cv::IMREAD_GRAYSCALE);
 
-        if (image_left.data == nullptr || image_right.data == nullptr)
+        Mat image_left = cv::imread(rgb_files_[grbd_frame_index_], cv::IMREAD_GRAYSCALE);
+        Mat image_depth = cv::imread(depth_files_[grbd_frame_index_], cv::IMREAD_UNCHANGED);
+
+        if (grbd_frame_index_ >= rgb_files_.size())
         {
             LOG(WARNING) << "cannot find images at index " << current_image_index_;
             return nullptr;
         }
 
-        cv::Mat image_left_resized, image_right_resized;
-        cv::resize(image_left, image_left_resized, cv::Size(), 0.5, 0.5,
-                   cv::INTER_NEAREST);
-        cv::resize(image_right, image_right_resized, cv::Size(), 0.5, 0.5,
-                   cv::INTER_NEAREST);
+        // cv::Mat image_left_resized;
+        // cv::resize(image_left, image_left_resized, cv::Size(), 0.5, 0.5,
+        //            cv::INTER_NEAREST);
 
         auto new_frame = Frame::CreateFrame();
-        new_frame->left_img_ = image_left_resized;
-        new_frame->right_img_ = image_right_resized;
+        // TODO depth不做resize会有问题吗？
+        new_frame->left_img_ = image_left;
+        new_frame->depth_ = image_depth;
         current_image_index_++;
+        grbd_frame_index_++;
+
         return new_frame;
     }
 

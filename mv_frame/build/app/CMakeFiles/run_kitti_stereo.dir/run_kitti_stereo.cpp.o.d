@@ -446,6 +446,7 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: \
  /home/alpaca/mv_slam/mv_frame/include/myslam/map/map.h \
  /home/alpaca/mv_slam/mv_frame/include/myslam/map/mappoint.h \
  /home/alpaca/mv_slam/mv_frame/include/myslam/data_pretreat/dataset.h \
+ /home/alpaca/mv_slam/mv_frame/include/myslam/data_pretreat/rgbd_dataset.h \
  /home/alpaca/mv_slam/mv_frame/include/myslam/front_end/frontend.h \
  /usr/local/include/opencv2/features2d.hpp \
  /usr/local/include/opencv2/flann/miniflann.hpp \

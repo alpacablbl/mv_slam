@@ -74,7 +74,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/9/stdexcept \
   /usr/include/c++/9/exception \
   /usr/include/c++/9/bits/exception.h \
@@ -146,13 +145,10 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
   /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/9/bits/std_abs.h \
   /usr/include/c++/9/cstdio \
   /usr/include/stdio.h \
@@ -160,8 +156,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
   /usr/include/x86_64-linux-gnu/bits/_G_config.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/9/bits/functional_hash.h \
   /usr/include/c++/9/bits/basic_string.tcc \
   /usr/include/c++/9/bits/unique_lock.h \
@@ -241,7 +235,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/bits/sstream.tcc \
   /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
@@ -250,7 +243,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
   /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
   /usr/include/c++/9/stdlib.h \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h \
   /usr/include/c++/9/cstddef \
   /usr/include/c++/9/cassert \
   /usr/include/assert.h \
@@ -259,8 +251,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
   /usr/include/c++/9/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
   /usr/include/c++/9/climits \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
@@ -512,7 +502,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/local/include/glog/platform.h \
   /usr/local/include/glog/export.h \
   /usr/include/inttypes.h \
@@ -525,6 +514,7 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
   ../include/myslam/map/map.h \
   ../include/myslam/map/mappoint.h \
   ../include/myslam/data_pretreat/dataset.h \
+  ../include/myslam/data_pretreat/rgbd_dataset.h \
   ../include/myslam/front_end/frontend.h \
   /usr/local/include/opencv2/features2d.hpp \
   /usr/local/include/opencv2/flann/miniflann.hpp \
@@ -635,13 +625,21 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/local/include/pangolin/display/attach.h:
 
-/usr/include/c++/9/bits/stl_deque.h:
+/usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h:
 
-/usr/include/c++/9/stack:
+/usr/include/c++/9/string:
 
-/usr/local/include/pangolin/gl/glstate.h:
+/usr/include/c++/9/climits:
 
-/usr/local/include/pangolin/gl/glvbo.h:
+/usr/include/c++/9/bits/uniform_int_dist.h:
+
+/usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h:
+
+../include/myslam/front_end/frontend.h:
+
+/usr/include/string.h:
 
 /usr/include/c++/9/cstring:
 
@@ -652,8 +650,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 /usr/include/eigen3/Eigen/Householder:
 
 /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h:
 
 /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h:
 
@@ -667,8 +663,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/include/eigen3/Eigen/src/Core/Solve.h:
 
-/usr/include/x86_64-linux-gnu/bits/mathinline.h:
-
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
@@ -676,6 +670,10 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 /usr/local/include/opencv2/flann/config.h:
 
 /usr/include/c++/9/bits/locale_classes.tcc:
+
+/usr/local/include/pangolin/image/image_io.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
@@ -745,8 +743,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/include/c++/9/bits/locale_classes.h:
 
-/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
-
 /usr/include/c++/9/bits/ios_base.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
@@ -787,6 +783,10 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h:
 
+../include/myslam/common_include.h:
+
+/usr/local/include/pangolin/image/image.h:
+
 /usr/include/c++/9/bits/refwrap.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h:
@@ -805,19 +805,9 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/include/c++/9/cstddef:
 
-/usr/include/string.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
-/usr/local/include/opencv2/core/check.hpp:
-
 /usr/local/include/glog/logging.h:
 
 /usr/include/c++/9/bits/exception_ptr.h:
-
-/usr/include/x86_64-linux-gnu/bits/select2.h:
-
-/usr/local/include/opencv2/core/ptr.inl.hpp:
 
 /usr/include/c++/9/cstdarg:
 
@@ -837,6 +827,8 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/include/stdlib.h:
 
+/usr/include/c++/9/bits/stl_deque.h:
+
 /usr/include/eigen3/Eigen/src/Core/util/Macros.h:
 
 /usr/include/c++/9/ext/alloc_traits.h:
@@ -849,9 +841,9 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/include/c++/9/bits/exception_defines.h:
 
-../app/run_kitti_stereo.cpp:
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
 
-/usr/include/c++/9/bits/memoryfwd.h:
+/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:
 
 /usr/include/asm-generic/errno.h:
 
@@ -917,6 +909,8 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/local/include/opencv2/core/matx.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
 /usr/include/c++/9/bits/stl_multimap.h:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h:
@@ -935,6 +929,16 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/include/eigen3/Eigen/src/Geometry/Quaternion.h:
 
+/usr/include/limits.h:
+
+/usr/include/c++/9/bits/basic_ios.tcc:
+
+/usr/include/c++/9/bits/cxxabi_forced.h:
+
+/usr/include/c++/9/limits:
+
+/usr/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
+
 /usr/include/c++/9/ext/new_allocator.h:
 
 /usr/include/c++/9/condition_variable:
@@ -950,12 +954,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 /usr/include/c++/9/bits/functexcept.h:
 
 /usr/include/c++/9/type_traits:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
 
 /usr/include/wctype.h:
 
@@ -994,16 +992,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/errno.h:
-
-/usr/include/c++/9/bits/basic_ios.tcc:
-
-/usr/include/c++/9/bits/cxxabi_forced.h:
-
-/usr/include/c++/9/limits:
-
-/usr/include/limits.h:
-
-/usr/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
@@ -1055,6 +1043,10 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 ../include/myslam/visual_odometry.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
+
 /usr/include/c++/9/ext/concurrence.h:
 
 /usr/include/c++/9/bits/stl_iterator_base_types.h:
@@ -1090,6 +1082,8 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 /usr/include/c++/9/bits/parse_numbers.h:
 
 /usr/include/c++/9/iostream:
+
+/usr/local/include/opencv2/core/bufferpool.hpp:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
@@ -1130,14 +1124,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 /usr/local/include/pangolin/gl/gldraw.h:
 
 /usr/include/eigen3/Eigen/src/Core/MatrixBase.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar2.h:
-
-/usr/include/c++/9/deque:
-
-/usr/include/c++/9/bits/stl_function.h:
-
-/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/pthread.h:
 
@@ -1191,6 +1177,12 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
+/usr/include/c++/9/bits/stl_function.h:
+
+/usr/include/c++/9/deque:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
 /usr/include/c++/9/stdexcept:
 
 /usr/include/c++/9/cstdio:
@@ -1227,15 +1219,19 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/include/c++/9/debug/assertions.h:
 
-/usr/include/c++/9/string:
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h:
+/usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/c++/9/bits/stl_algobase.h:
 
 /usr/include/c++/9/ctime:
 
 /usr/include/c++/9/bits/ptr_traits.h:
+
+/usr/include/strings.h:
+
+/usr/include/c++/9/bits/locale_facets.tcc:
 
 /usr/local/include/pangolin/utils/params.h:
 
@@ -1245,15 +1241,9 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
 
-/usr/local/include/pangolin/image/image.h:
+../app/run_kitti_stereo.cpp:
 
-../include/myslam/common_include.h:
-
-/usr/include/c++/9/bits/locale_facets.tcc:
-
-/usr/include/strings.h:
-
-../include/myslam/front_end/frontend.h:
+/usr/include/c++/9/bits/memoryfwd.h:
 
 /usr/include/c++/9/bits/postypes.h:
 
@@ -1264,38 +1254,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 /usr/include/eigen3/Eigen/Eigenvalues:
 
 /usr/local/include/pangolin/display/window.h:
-
-/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/x86_64-linux-gnu/bits/libio.h:
-
-/usr/include/c++/9/bits/random.h:
-
-/usr/include/c++/9/climits:
-
-/usr/include/c++/9/bits/uniform_int_dist.h:
-
-/usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h:
-
-/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:
-
-/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/local/include/pangolin/image/image_io.h:
-
-/usr/include/x86_64-linux-gnu/bits/locale.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
-/usr/local/include/opencv2/core/bufferpool.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
@@ -1339,6 +1297,8 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/local/include/sophus/so2.hpp:
 
+../include/myslam/data_pretreat/rgbd_dataset.h:
+
 /usr/include/eigen3/Eigen/src/Core/NumTraits.h:
 
 /usr/include/c++/9/math.h:
@@ -1346,8 +1306,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 /usr/include/linux/limits.h:
 
 /usr/include/eigen3/Eigen/src/Core/MathFunctions.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
@@ -1380,10 +1338,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 /usr/include/eigen3/Eigen/src/LU/FullPivLU.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:
-
-/usr/local/include/pangolin/gl/colour.h:
-
-/usr/include/c++/9/bits/stream_iterator.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h:
 
@@ -1435,6 +1389,10 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
 
+/usr/include/c++/9/bits/stream_iterator.h:
+
+/usr/local/include/pangolin/gl/colour.h:
+
 /usr/include/eigen3/Eigen/src/Core/DenseStorage.h:
 
 /usr/include/eigen3/Eigen/src/Core/NestByValue.h:
@@ -1444,6 +1402,8 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h:
 
 /usr/include/eigen3/Eigen/src/Core/Array.h:
+
+/usr/local/include/pangolin/gl/glstate.h:
 
 /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:
 
@@ -1641,11 +1601,15 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/include/c++/9/random:
 
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/libio.h:
+
+/usr/include/c++/9/bits/random.h:
+
 /usr/include/x86_64-linux-gnu/c++/9/bits/opt_random.h:
 
 /usr/local/include/fmt/ostream.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
 
 /usr/local/include/glog/platform.h:
 
@@ -1657,11 +1621,15 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/local/include/opencv2/core/base.hpp:
 
+/usr/local/include/opencv2/core/ptr.inl.hpp:
+
 /usr/include/c++/9/debug/debug.h:
 
 /usr/local/include/opencv2/core/neon_utils.hpp:
 
 /usr/local/include/opencv2/core/optim.hpp:
+
+/usr/local/include/opencv2/core/check.hpp:
 
 /usr/include/eigen3/Eigen/src/Geometry/Homogeneous.h:
 
@@ -1672,10 +1640,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 /usr/include/c++/9/bits/atomic_lockfree_defines.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h:
-
-/usr/local/include/pangolin/display/view.h:
-
-/usr/local/include/opencv2/core/persistence.hpp:
 
 /usr/include/eigen3/Eigen/src/Householder/HouseholderSequence.h:
 
@@ -1694,10 +1658,6 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 /usr/include/unistd.h:
 
 /usr/include/x86_64-linux-gnu/bits/confname.h:
-
-/usr/include/x86_64-linux-gnu/bits/unistd.h:
-
-/usr/local/include/pangolin/gl/glpixformat.h:
 
 /usr/include/eigen3/Eigen/src/Core/VectorBlock.h:
 
@@ -1751,6 +1711,8 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 
 /usr/local/include/pangolin/gl/gl.hpp:
 
+/usr/local/include/pangolin/gl/glpixformat.h:
+
 /usr/include/eigen3/Eigen/src/LU/Determinant.h:
 
 /usr/local/include/pangolin/gl/glformattraits.h:
@@ -1758,3 +1720,11 @@ app/CMakeFiles/run_kitti_stereo.dir/run_kitti_stereo.cpp.o: ../app/run_kitti_ste
 /usr/local/include/pangolin/display/display.h:
 
 /usr/local/include/pangolin/handler/handler_enums.h:
+
+/usr/local/include/pangolin/gl/glvbo.h:
+
+/usr/include/c++/9/stack:
+
+/usr/local/include/opencv2/core/persistence.hpp:
+
+/usr/local/include/pangolin/display/view.h:
