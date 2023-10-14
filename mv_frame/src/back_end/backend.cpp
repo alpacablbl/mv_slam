@@ -86,7 +86,7 @@ namespace myslam
         SE3 right_ext;
         if (bsensor_ == VisualOdometry::STEREO)
             right_ext = cam_right_->pose();
-        else if (bsensor_ == VisualOdometry::RGBD)
+        else if (bsensor_ == VisualOdometry::RGBD || bsensor_ == VisualOdometry::MONOCULAR)
         {
         }
 
@@ -123,7 +123,7 @@ namespace myslam
                         edge = new EdgeProjection(K, right_ext);
                     }
                 }
-                else if (bsensor_ == VisualOdometry::RGBD)
+                else if (bsensor_ == VisualOdometry::RGBD || bsensor_ == VisualOdometry::MONOCULAR)
                 {
                     edge = new EdgeProjection(K, left_ext);
                 }

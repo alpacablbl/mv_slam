@@ -32,14 +32,19 @@ namespace myslam
         std::mutex pose_mutex_;        // Pose数据锁
         cv::Mat left_img_, right_img_; // stereo images
         cv::Mat depth_;                // RGBD相机的深度图
+        static cv::Mat initK_;
 
         // extracted features in left image
         std::vector<std::shared_ptr<Feature>> features_left_;
         // features in right image, set to nullptr if no corresponding
         std::vector<std::shared_ptr<Feature>> features_right_;
 
+        std::vector<cv::Point2f> mono_Features_;
+
     public: // data members
-        Frame() {}
+        Frame()
+        {
+        }
 
         Frame(long id, double time_stamp, const SE3 &pose, const Mat &left,
               const Mat &right);

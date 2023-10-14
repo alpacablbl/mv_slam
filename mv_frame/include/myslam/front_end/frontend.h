@@ -35,6 +35,8 @@ namespace myslam
 
         Frontend(const int sensor);
 
+        Frontend(const int sensor, Frame::Ptr mono_frame);
+
         /// 外部接口，添加一个帧并计算其定位结果
         bool AddFrame(Frame::Ptr frame);
 
@@ -66,6 +68,12 @@ namespace myslam
         bool Track();
 
         /**
+         * Track for mono
+         * @return true if success
+         */
+        bool monoTrack();
+
+        /**
          * Reset when lost
          * @return true if success
          */
@@ -84,13 +92,19 @@ namespace myslam
         int EstimateCurrentPose();
 
         /**
+         * calculate current frame's mono pose
+         * @return num of inliers
+         */
+        void CalMonoCurrentPose();
+
+        /**
          * set current frame as a keyframe and insert it into backend
          * @return true if success
          */
         bool InsertKeyframe();
 
         /**
-         * Try init the frontend with stereo images saved in current_frame_
+         * Try init the frontend with rgbd images saved in current_frame_
          * @return true if success
          */
         bool RgbdInit();
@@ -102,6 +116,12 @@ namespace myslam
         bool StereoInit();
 
         /**
+         * Try init the frontend with mono images saved in current_frame_
+         * @return true if success
+         */
+        bool MonoInit();
+
+        /**
          * Detect features in left image in current_frame_
          * keypoints will be saved in current_frame_
          * @return
@@ -109,16 +129,34 @@ namespace myslam
         int DetectFeatures();
 
         /**
+         * Detect features in left image in specify frame
+         * keypoints will be saved in current_frame_
+         * @return
+         */
+        int DetectFeatures(Frame::Ptr t_frame);
+
+        /**
          * Find the corresponding features in right image of current_frame_
          * @return num of features found
          */
         int FindFeaturesInRight();
+        /**
+         * Find the corresponding features in left image of current_frame_ depend last_frame_
+         * @return num of features found
+         */
+        int FindFeaturesInCurrent();
 
         /**
          * Build the initial map with single image
          * @return true if succeed
          */
         bool BuildInitMap();
+
+        /**
+         * Build the initial mono map with single image
+         * @return true if succeed
+         */
+        bool BuildInitMonoMap();
 
         /**
          * Build the initial rgbd map with single image
@@ -131,6 +169,12 @@ namespace myslam
          * @return num of triangulated points
          */
         int TriangulateNewPoints();
+
+        /**
+         * Triangulate the 2D points in current frame for mono
+         * @return num of triangulated points
+         */
+        int TriangulateMonoNewPoints();
 
         /**
          * Set the features in keyframe as new observation of the map points
@@ -147,6 +191,7 @@ namespace myslam
 
         Frame::Ptr current_frame_ = nullptr; // 当前帧
         Frame::Ptr last_frame_ = nullptr;    // 上一帧
+        Frame::Ptr fmono_frame_ = nullptr;
         Camera::Ptr camera_left_ = nullptr;  // 左侧相机
         Camera::Ptr camera_right_ = nullptr; // 右侧相机
 

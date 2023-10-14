@@ -3,6 +3,24 @@
 #include "myslam/camera.h"
 #include "myslam/common_include.h"
 #include "myslam/map/frame.h"
+#include "opencv2/video/tracking.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/features2d/features2d.hpp"
+#include "opencv2/calib3d/calib3d.hpp"
+
+#include <iostream>
+#include <ctype.h>
+#include <algorithm>
+#include <iterator>
+#include <vector>
+#include <ctime>
+#include <sstream>
+#include <fstream>
+#include <string>
+
+using namespace cv;
+using namespace std;
 
 namespace myslam
 {
@@ -25,6 +43,11 @@ namespace myslam
     /// create and return the next frame containing the stereo images
     Frame::Ptr NextFrame();
 
+    Frame::Ptr getMonoInitFrame()
+    {
+      return momo_init_frame_;
+    }
+
     /// get camera by id
     Camera::Ptr GetCamera(int camera_id) const
     {
@@ -34,6 +57,10 @@ namespace myslam
   private:
     std::string dataset_path_;
     int current_image_index_ = 0;
+    // 通过前两帧进行初始化后得到的位姿
+    Mat R_, t_;
+    Frame::Ptr momo_init_frame_ = nullptr;
+    bool ismonofirst_scan_ = false;
 
     std::vector<Camera::Ptr> cameras_;
   };

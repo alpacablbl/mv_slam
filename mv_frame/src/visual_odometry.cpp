@@ -43,9 +43,23 @@ namespace myslam
                 RgbdDataset::Ptr(new RgbdDataset(Config::Get<std::string>("dataset_dir")));
             CHECK_EQ(rgbd_dataset_->Init(), true);
         }
+        else if (sensor_ == VisualOdometry::MONOCULAR)
+        {
+            mono_dataset_ =
+                MonoDataset::Ptr(new MonoDataset(Config::Get<std::string>("dataset_dir")));
+            CHECK_EQ(mono_dataset_->Init(), true);
+        }
 
         // create components and links
-        frontend_ = Frontend::Ptr(new Frontend(sensor_));
+        if (sensor_ == VisualOdometry::MONOCULAR)
+        {
+            // 把mono_dataset的frame作为参数传给front 此时的monoframe包含image, T, 但是没有feature，在front的monoInit中进行初始化feature
+            frontend_ = Frontend::Ptr(new Frontend(sensor_, mono_dataset_->getMonoInitFrame()));
+        }
+        else
+        {
+            frontend_ = Frontend::Ptr(new Frontend(sensor_));
+        }
         backend_ = Backend::Ptr(new Backend(sensor_));
         map_ = Map::Ptr(new Map);
         viewer_ = Viewer::Ptr(new Viewer);
@@ -70,6 +84,15 @@ namespace myslam
             backend_->SetMap(map_);
             // TODO rgbd remove camera1
             backend_->SetCameras(rgbd_dataset_->GetCamera(0));
+        }
+        else if (sensor_ == VisualOdometry::MONOCULAR)
+        {
+            // TODO mono remove camera1
+            frontend_->SetCameras(mono_dataset_->GetCamera(0)); // 取左右灰度相机
+
+            backend_->SetMap(map_);
+            // TODO mono remove camera1
+            backend_->SetCameras(mono_dataset_->GetCamera(0));
         }
 
         viewer_->SetMap(map_);
@@ -105,8 +128,11 @@ namespace myslam
         }
         else if (sensor_ == VisualOdometry::RGBD)
         {
-
             new_frame = rgbd_dataset_->NextFrame();
+        }
+        else if (sensor_ == VisualOdometry::MONOCULAR)
+        {
+            new_frame = mono_dataset_->NextFrame();
         }
         if (new_frame == nullptr)
             return false;

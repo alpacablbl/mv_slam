@@ -14,10 +14,20 @@
 #include "myslam/map/map.h"
 #include "myslam/viewer/viewer.h"
 
+#define MIN_NUM_FEAT 2000
+
 namespace myslam
 {
 
     Frontend::Frontend(const int sensor) : fsensor_(sensor)
+    {
+        gftt_ =
+            cv::GFTTDetector::create(Config::Get<int>("num_features"), 0.01, 20);
+        num_features_init_ = Config::Get<int>("num_features_init");
+        num_features_ = Config::Get<int>("num_features");
+    }
+
+    Frontend::Frontend(const int sensor, Frame::Ptr mono_frame) : fsensor_(sensor), fmono_frame_(mono_frame)
     {
         gftt_ =
             cv::GFTTDetector::create(Config::Get<int>("num_features"), 0.01, 20);
@@ -36,10 +46,15 @@ namespace myslam
                 StereoInit();
             else if (fsensor_ == VisualOdometry::RGBD)
                 RgbdInit();
+            else if (fsensor_ == VisualOdometry::MONOCULAR)
+                MonoInit();
             break;
         case FrontendStatus::TRACKING_GOOD:
         case FrontendStatus::TRACKING_BAD:
-            Track();
+            if (fsensor_ == VisualOdometry::MONOCULAR)
+                monoTrack();
+            else
+                Track();
             break;
         case FrontendStatus::LOST:
             Reset();
@@ -47,6 +62,44 @@ namespace myslam
         }
 
         last_frame_ = current_frame_;
+        return true;
+    }
+
+    bool Frontend::monoTrack()
+    {
+        // int num_track_last = TrackLastFrame();
+
+        // mono不需要icp估计位姿
+        // TODO mono自己的位姿计算函数
+        if (last_frame_->mono_Features_.size() < MIN_NUM_FEAT)
+        {
+            DetectFeatures(last_frame_);
+        }
+        CalMonoCurrentPose();
+
+        tracking_inliers_ = EstimateCurrentPose();
+
+        if (tracking_inliers_ > num_features_tracking_)
+        {
+            // tracking good
+            status_ = FrontendStatus::TRACKING_GOOD;
+        }
+        else if (tracking_inliers_ > num_features_tracking_bad_)
+        {
+            // tracking bad
+            status_ = FrontendStatus::TRACKING_BAD;
+        }
+        else
+        {
+            // lost
+            status_ = FrontendStatus::LOST;
+        }
+
+        // TODO 对于mono，需要多detectFeature一次
+        InsertKeyframe();
+
+        if (viewer_)
+            viewer_->AddCurrentFrame(current_frame_);
         return true;
     }
 
@@ -58,6 +111,8 @@ namespace myslam
         }
 
         int num_track_last = TrackLastFrame();
+
+        // mono不需要icp估计位姿
         tracking_inliers_ = EstimateCurrentPose();
 
         if (tracking_inliers_ > num_features_tracking_)
@@ -99,7 +154,11 @@ namespace myslam
                   << current_frame_->keyframe_id_;
 
         SetObservationsForKeyFrame();
-        DetectFeatures(); // detect new features
+        // TODO stereo and rgbd 需要检测特征，mono在monotrack中已经做了lastframe的特征检测
+        if (fsensor_ != VisualOdometry::MONOCULAR)
+        {
+            DetectFeatures(); // detect new features
+        }
 
         if (fsensor_ == VisualOdometry::STEREO)
         {
@@ -112,6 +171,13 @@ namespace myslam
         {
             // TODO
             RgbdAddMappoint();
+        }
+        else if (fsensor_ == VisualOdometry::MONOCULAR)
+        {
+            // TODO track in last image
+            FindFeaturesInCurrent();
+            // triangulate map points
+            TriangulateMonoNewPoints();
         }
 
         // update backend because we have a new keyframe
@@ -135,6 +201,7 @@ namespace myslam
 
     int Frontend::TriangulateNewPoints()
     {
+        // 两个位置的相机位姿
         std::vector<SE3> poses{camera_left_->pose(), camera_right_->pose()};
         SE3 current_pose_Twc = current_frame_->Pose().inverse();
         int cnt_triangulated_pts = 0;
@@ -165,6 +232,44 @@ namespace myslam
 
                     current_frame_->features_left_[i]->map_point_ = new_map_point;
                     current_frame_->features_right_[i]->map_point_ = new_map_point;
+                    map_->InsertMapPoint(new_map_point);
+                    cnt_triangulated_pts++;
+                }
+            }
+        }
+        LOG(INFO) << "new landmarks: " << cnt_triangulated_pts;
+        return cnt_triangulated_pts;
+    }
+
+    int Frontend::TriangulateMonoNewPoints()
+    {
+        // TODO 换成cur和ref frame的pose
+        std::vector<SE3> poses{last_frame_->pose(), current_frame_->pose()};
+        int cnt_triangulated_pts = 0;
+        for (size_t i = 0; i < last_frame_->features_left_.size(); ++i)
+        {
+            if (last_frame_->features_left_[i]->map_point_.expired() &&
+                current_frame_->features_left_[i] != nullptr)
+            {
+                // 左图的特征点未关联地图点且存在右图匹配点，尝试三角化
+                std::vector<Vec3> points{
+                    camera_left_->pixel2camera(
+                        Vec2(last_frame_->features_left_[i]->position_.pt.x,
+                             last_frame_->features_left_[i]->position_.pt.y)),
+                    camera_right_->pixel2camera(
+                        Vec2(current_frame_->features_left_[i]->position_.pt.x,
+                             current_frame_->features_left_[i]->position_.pt.y))};
+                Vec3 pworld = Vec3::Zero();
+
+                if (triangulation(poses, points, pworld) && pworld[2] > 0)
+                {
+                    auto new_map_point = MapPoint::CreateNewMappoint();
+                    new_map_point->SetPos(pworld);
+                    new_map_point->AddObservation(last_frame_->features_left_[i]);
+                    new_map_point->AddObservation(current_frame_->features_left_[i]);
+
+                    last_frame_->features_left_[i]->map_point_ = new_map_point;
+                    current_frame_->features_left_[i]->map_point_ = new_map_point;
                     map_->InsertMapPoint(new_map_point);
                     cnt_triangulated_pts++;
                 }
@@ -231,6 +336,21 @@ namespace myslam
             }
         }
         LOG(INFO) << "new landmarks: " << cnt_triangulated_pts;
+    }
+
+    void Frontend::CalMonoCurrentPose()
+    {
+        vector<uchar> status;
+        vector<Point2f> points2;
+        // 由pic1和其特征点，通过光流计算出points2(对应在pic2上的特征点)
+        featureTracking(last_frame_->left_img_, current_frame_->left_img_, last_frame_->mono_Features_, points2, status);
+        Mat E, R, t, mask;
+        E = findEssentialMat(points2, last_frame_->mono_Features_, Frame::initK, RANSAC, 0.999, 1.0, mask);
+        recoverPose(E, points2, last_frame_->mono_Features_, Frame::initK, R, t, mask);
+
+        // 创建Sophus::SE3d类型的变换矩阵T
+        SE3 T = Rt2T(R, t);
+        current_frame_->SetPose(T);
     }
 
     // 估计当前位姿并计算内点
@@ -319,7 +439,12 @@ namespace myslam
         // LOG(INFO) << "Outlier/Inlier in pose estimating: " << cnt_outlier << "/"
         //           << features.size() - cnt_outlier;
         // Set pose and outlier
-        current_frame_->SetPose(vertex_pose->estimate());
+
+        // 非mono用对极几何求位姿
+        if (fsensor_ != VisualOdometry::MONOCULAR)
+        {
+            current_frame_->SetPose(vertex_pose->estimate());
+        }
 
         // LOG(INFO) << "Current Pose = \n"
         //           << current_frame_->Pose().matrix();
@@ -408,12 +533,38 @@ namespace myslam
         return false;
     }
 
-    // TODO RgbdInit (未改)
     bool Frontend::RgbdInit()
     {
         int num_features_left = DetectFeatures();
 
         bool build_map_success = BuildInitRgbdMap();
+        if (build_map_success)
+        {
+            status_ = FrontendStatus::TRACKING_GOOD;
+            if (viewer_)
+            {
+
+                viewer_->AddCurrentFrame(current_frame_);
+                viewer_->UpdateMap();
+            }
+            return true;
+        }
+        return false;
+    }
+
+    // TODO 特征点检测，初始化地图都要修改
+    bool Frontend::MonoInit()
+    {
+
+        //===================================================================//
+        // int num_features_left = DetectFeatures();
+        DetectFeatures(fmono_frame_);
+        last_frame_ = fmono_frame_;
+
+        CalMonoCurrentPose();
+        FindFeaturesInCurrent();
+
+        bool build_map_success = BuildInitMonoMap();
         if (build_map_success)
         {
             status_ = FrontendStatus::TRACKING_GOOD;
@@ -444,6 +595,28 @@ namespace myslam
         {
             current_frame_->features_left_.push_back(
                 Feature::Ptr(new Feature(current_frame_, kp)));
+            cnt_detected++;
+        }
+
+        LOG(INFO) << "Detect " << cnt_detected << " new features";
+        return cnt_detected;
+    }
+
+    int Frontend::DetectFeatures(Frame::Ptr t_frame)
+    {
+        std::vector<KeyPoint> keypoints_1;
+        std::vector<cv::KeyPoint> keypoints;
+        int fast_threshold = 20;
+        bool nonmaxSuppression = true;
+        // 顺序会对结果有影响吗？
+        FAST(t_frame->left_img_, keypoints_1, fast_threshold, nonmaxSuppression);
+        KeyPoint::convert(keypoints_1, t_frame->monoFeatures_, vector<int>());
+
+        int cnt_detected = 0;
+        for (auto &kp : keypoints_1)
+        {
+            t_frame->features_left_.push_back(
+                Feature::Ptr(new Feature(t_frame, kp)));
             cnt_detected++;
         }
 
@@ -503,6 +676,41 @@ namespace myslam
         return num_good_pts;
     }
 
+    // TODO mono use
+    // 通过lastframe算出currentframe的features，存储在features_left_和mono_Features_[Point2f]两种类型的数据结构里
+    int Frontend::FindFeaturesInCurrent()
+    {
+        // use LK flow to estimate points in the current image
+
+        std::vector<uchar> status;
+        Mat error;
+        cv::calcOpticalFlowPyrLK(
+            last_frame_->left_img_, current_frame_->left_img_, last_frame_->mono_Features_,
+            current_frame_->mono_Features_, status, error, cv::Size(11, 11), 3,
+            cv::TermCriteria(cv::TermCriteria::COUNT + cv::TermCriteria::EPS, 30,
+                             0.01),
+            cv::OPTFLOW_USE_INITIAL_FLOW);
+
+        int num_good_pts = 0;
+        for (size_t i = 0; i < status.size(); ++i)
+        {
+            if (status[i])
+            {
+                cv::KeyPoint kp(current_frame_->mono_Features_[i], 7);
+                Feature::Ptr feat(new Feature(current_frame_, kp));
+                // feat->is_on_left_image_ = false;
+                current_frame_->features_left_.push_back(feat);
+                num_good_pts++;
+            }
+            else
+            {
+                current_frame_->features_left_.push_back(nullptr);
+            }
+        }
+        LOG(INFO) << "Find " << num_good_pts << " in the current image.";
+        return num_good_pts;
+    }
+
     // TODO RGBD相机初始化不用三角化，直接判断一下深度是否合法就可以加进去了
     bool Frontend::BuildInitMap()
     {
@@ -532,6 +740,49 @@ namespace myslam
                 new_map_point->AddObservation(current_frame_->features_right_[i]); // 可删
                 current_frame_->features_left_[i]->map_point_ = new_map_point;     // 2d特征点在三角化之后会被关联一个地图点
                 current_frame_->features_right_[i]->map_point_ = new_map_point;
+                cnt_init_landmarks++;                /// 路标数量增加
+                map_->InsertMapPoint(new_map_point); // 初始化完成的地图点加入地图
+            }
+        }
+        current_frame_->SetKeyFrame();
+        map_->InsertKeyFrame(current_frame_);
+        backend_->UpdateMap(); // 关键帧的插入会启动优化
+
+        LOG(INFO) << "Initial map created with " << cnt_init_landmarks
+                  << " map points";
+
+        return true;
+    }
+
+    // TODO
+    bool Frontend::BuildInitMonoMap()
+    {
+        std::vector<SE3> poses{last_frame_->pose(), current_frame_->pose()};
+        size_t cnt_init_landmarks = 0;
+        for (size_t i = 0; i < last_frame_->features_left_.size(); ++i)
+        {
+            if (current_frame_->features_left_[i] == nullptr)
+                continue;
+            // create map point from triangulation
+            // 根据左右相机位姿和某一匹配特征点，计算出此特征点的深度
+            std::vector<Vec3> points{
+                camera_left_->pixel2camera(
+                    Vec2(last_frame_->features_left_[i]->position_.pt.x,
+                         last_frame_->features_left_[i]->position_.pt.y)),
+                camera_right_->pixel2camera(
+                    Vec2(current_frame_->features_left_[i]->position_.pt.x,
+                         current_frame_->features_left_[i]->position_.pt.y))};
+            Vec3 pworld = Vec3::Zero();
+
+            // 若通过三角测距成功计算出深度
+            if (triangulation(poses, points, pworld) && pworld[2] > 0)
+            {
+                auto new_map_point = MapPoint::CreateNewMappoint();
+                new_map_point->SetPos(pworld);                                    // world系下3d点加入地图点中
+                new_map_point->AddObservation(last_frame_->features_left_[i]);    // 可删
+                new_map_point->AddObservation(current_frame_->features_left_[i]); // 可删
+                last_frame_->features_left_[i]->map_point_ = new_map_point;       // 2d特征点在三角化之后会被关联一个地图点
+                current_frame_->features_left_[i]->map_point_ = new_map_point;
                 cnt_init_landmarks++;                /// 路标数量增加
                 map_->InsertMapPoint(new_map_point); // 初始化完成的地图点加入地图
             }
