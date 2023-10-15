@@ -244,7 +244,7 @@ namespace myslam
     int Frontend::TriangulateMonoNewPoints()
     {
         // TODO 换成cur和ref frame的pose
-        std::vector<SE3> poses{last_frame_->pose(), current_frame_->pose()};
+        std::vector<SE3> poses{last_frame_->Pose(), current_frame_->Pose()};
         int cnt_triangulated_pts = 0;
         for (size_t i = 0; i < last_frame_->features_left_.size(); ++i)
         {
@@ -344,9 +344,10 @@ namespace myslam
         vector<Point2f> points2;
         // 由pic1和其特征点，通过光流计算出points2(对应在pic2上的特征点)
         featureTracking(last_frame_->left_img_, current_frame_->left_img_, last_frame_->mono_Features_, points2, status);
-        Mat E, R, t, mask;
-        E = findEssentialMat(points2, last_frame_->mono_Features_, Frame::initK, RANSAC, 0.999, 1.0, mask);
-        recoverPose(E, points2, last_frame_->mono_Features_, Frame::initK, R, t, mask);
+        Mat E, R, t, initK, mask;
+        initK = Frame::initK_;
+        E = findEssentialMat(points2, last_frame_->mono_Features_, initK, RANSAC, 0.999, 1.0, mask);
+        recoverPose(E, points2, last_frame_->mono_Features_, initK, R, t, mask);
 
         // 创建Sophus::SE3d类型的变换矩阵T
         SE3 T = Rt2T(R, t);
@@ -610,7 +611,7 @@ namespace myslam
         bool nonmaxSuppression = true;
         // 顺序会对结果有影响吗？
         FAST(t_frame->left_img_, keypoints_1, fast_threshold, nonmaxSuppression);
-        KeyPoint::convert(keypoints_1, t_frame->monoFeatures_, vector<int>());
+        KeyPoint::convert(keypoints_1, t_frame->mono_Features_, vector<int>());
 
         int cnt_detected = 0;
         for (auto &kp : keypoints_1)
@@ -757,7 +758,7 @@ namespace myslam
     // TODO
     bool Frontend::BuildInitMonoMap()
     {
-        std::vector<SE3> poses{last_frame_->pose(), current_frame_->pose()};
+        std::vector<SE3> poses{last_frame_->Pose(), current_frame_->Pose()};
         size_t cnt_init_landmarks = 0;
         for (size_t i = 0; i < last_frame_->features_left_.size(); ++i)
         {

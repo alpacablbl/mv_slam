@@ -7,7 +7,6 @@
 
 // algorithms used in myslam
 #include "myslam/common_include.h"
-#include "mono_dataset.h"
 
 namespace myslam
 {
@@ -46,7 +45,7 @@ namespace myslam
     inline Vec2 toVec2(const cv::Point2f p) { return Vec2(p.x, p.y); }
 
     // TODO暂时使用，后面可改成用DetectFeatures()
-    void featureTracking(Mat img_1, Mat img_2, vector<Point2f> &points1, vector<Point2f> &points2, vector<uchar> &status)
+    inline void featureTracking(Mat img_1, Mat img_2, vector<Point2f> &points1, vector<Point2f> &points2, vector<uchar> &status)
     {
 
         // this function automatically gets rid of points for which tracking fails
@@ -75,7 +74,7 @@ namespace myslam
         }
     }
 
-    void featureDetection(Mat img_1, vector<Point2f> &points1)
+    inline void featureDetection(Mat img_1, vector<Point2f> &points1)
     { // uses FAST as of now, modify parameters as necessary
         vector<KeyPoint> keypoints_1;
         int fast_threshold = 20;
@@ -84,7 +83,7 @@ namespace myslam
         KeyPoint::convert(keypoints_1, points1, vector<int>());
     }
 
-    SE3 Rt2T(Mat R, Mat t)
+    inline SE3 Rt2T(Mat R, Mat t)
     {
         Eigen::Matrix3d eigen_R;
         Eigen::Vector3d eigen_t;

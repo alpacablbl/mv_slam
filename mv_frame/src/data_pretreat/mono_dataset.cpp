@@ -9,7 +9,7 @@ using namespace std;
 
 namespace myslam
 {
-
+  Mat Frame::initK_ = cv::Mat_<double>(3, 3);
   MonoDataset::MonoDataset(const std::string &dataset_path)
       : dataset_path_(dataset_path) {}
 

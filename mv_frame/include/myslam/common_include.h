@@ -107,10 +107,15 @@ typedef Sophus::SO3d SO3;
 
 // for cv
 #include <opencv2/core/core.hpp>
+#include "opencv2/video/tracking.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/features2d/features2d.hpp"
+#include "opencv2/calib3d/calib3d.hpp"
 
 using cv::Mat;
 
 // glog
 #include <glog/logging.h>
 
-#endif  // MYSLAM_COMMON_INCLUDE_H
+#endif // MYSLAM_COMMON_INCLUDE_H
